@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db1722ad-0e7f-4e60-b02a-e2a9400c30f6">
+  <producedTypes>
+    <refType typeId="798fbbac-47e7-483d-9e2d-8c09a874137a" valueTypeId="e285b9d9-a48c-4e78-9242-1a7f231b851e"/>
+    <listType typeId="3bd1cd35-67d5-40a2-a0d6-b04f6ca5bb9d" valueTypeId="d339a020-a74b-41ea-a48b-75e43b0029be"/>
+    <managerType typeId="f57d64ce-256b-49ad-b065-43679ae75c81" valueTypeId="8be4ea77-a6e3-407d-919f-f677a271ca81"/>
+  </producedTypes>
+  <name>ТипыОбращений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы обращений</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="16be8620-3f99-4e96-8a38-728f0abfcca2">
+    <name>ТехническаяОшибка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Техническая ошибка</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a87991f1-8ca4-49b7-945b-0892c08c5126">
+    <name>ВопросПоОплате</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вопрос по оплате</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0715ca7b-fb95-4899-86a9-95242200690c">
+    <name>Предложение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предложение</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="81e19ff9-f3d5-4dea-a502-606bff026801">
+    <name>Жалоба</name>
+    <synonym>
+      <key>ru</key>
+      <value>Жалоба</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4be7b222-a16d-4a1b-b4f0-aeecce86dfb2">
+    <name>Прочее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прочее</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

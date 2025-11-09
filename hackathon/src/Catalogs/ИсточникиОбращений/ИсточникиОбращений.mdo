@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="522dfba3-719e-49a9-a8af-63c46a800d48">
+  <producedTypes>
+    <objectType typeId="3bbc6b50-e8e8-4b81-800e-0ee648993c95" valueTypeId="d1958de2-add4-442e-87cd-697385208c70"/>
+    <refType typeId="04a6325a-5a2f-4c80-ac11-45c4b034b48b" valueTypeId="2a02ddf9-4a37-42dc-887c-a3b4228e825c"/>
+    <selectionType typeId="8b4d6cf6-f1b4-4ee3-9dde-eb1b88347ae5" valueTypeId="4742552a-704f-4d1c-94de-d79c01c96d06"/>
+    <listType typeId="6fac5cbf-34c0-4857-b6e7-0b6dc2bd5f71" valueTypeId="3a4d6881-d946-4432-85be-01e8a5cd01c5"/>
+    <managerType typeId="04595676-27c4-4f91-b250-2fb9bf292fb3" valueTypeId="652524d2-dc0f-486a-8abb-ffd49cde1fc6"/>
+  </producedTypes>
+  <name>ИсточникиОбращений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Источники обращений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ИсточникиОбращений.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ИсточникиОбращений.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="fe24a8dc-6ec4-4f8f-b62f-1a9741bbc751">
+      <name>Telegram</name>
+      <description>Telegram</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
