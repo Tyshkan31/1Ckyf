@@ -191,6 +191,15 @@
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="7aadc330-83d5-448c-8c69-d06eea7c6b01">
+      <name>СистемныйПользователь</name>
+      <description>AUTO</description>
+      <code xsi:type="core:StringValue">
+        <value></value>
+      </code>
+    </items>
+  </predefined>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
   <defaultObjectForm>Catalog.Пользователи.Form.ФормаЭлемента</defaultObjectForm>
