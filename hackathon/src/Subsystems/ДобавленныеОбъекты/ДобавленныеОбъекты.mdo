@@ -13,7 +13,7 @@
   <content>Enum.СтатусыОбращения</content>
   <content>Enum.ТипыОбращений</content>
   <content>Enum.ТональностьОбращений</content>
-  <content>AccumulationRegister.ТрудозатратрыОбращений</content>
+  <content>AccumulationRegister.ТрудозатратыОбращений</content>
   <content>InformationRegister.СостояниеОбращений</content>
   <content>Catalog.Сотрудники</content>
 </mdclass:Subsystem>

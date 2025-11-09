@@ -8,10 +8,10 @@
     <recordKeyType typeId="3366c4c0-8fb7-4d59-a57e-a6347fc7a28b" valueTypeId="bca681fe-def8-4c85-bd1a-a7d5e7d7ef10"/>
     <recordType typeId="ff694d00-4154-4d8f-919c-82253655b3ec" valueTypeId="5fe03530-3336-4414-93ef-fe06cf5a3bae"/>
   </producedTypes>
-  <name>ТрудозатратрыОбращений</name>
+  <name>ТрудозатратыОбращений</name>
   <synonym>
     <key>ru</key>
-    <value>Трудозатратры обращений</value>
+    <value>Трудозатраты обращений</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <registerType>Turnovers</registerType>
@@ -58,10 +58,38 @@
       <value>Обращение</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>10</length>
-      </stringQualifiers>
+      <types>CatalogRef.Обращения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="74f3abc3-48e3-456c-9192-3a747833df2b">
+    <name>ДатаРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата работ</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d0ff7ff0-bdef-4211-947e-aaaee0c8a9ca">
+    <name>Исполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
