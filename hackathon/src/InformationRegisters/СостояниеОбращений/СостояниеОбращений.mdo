@@ -77,18 +77,13 @@
       <value>Сотрудник</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>10</length>
-      </stringQualifiers>
+      <types>CatalogRef.Пользователи</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <mainFilter>true</mainFilter>
   </dimensions>
 </mdclass:InformationRegister>

@@ -295,7 +295,7 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.StandardCommand.Copy</commandName>
+        <commandName>0</commandName>
         <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
@@ -321,7 +321,7 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.StandardCommand.Change</commandName>
+        <commandName>0</commandName>
         <buttonImportance>Normal</buttonImportance>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
@@ -1041,7 +1041,7 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <commandName>Form.StandardCommand.OutputList</commandName>
+          <commandName>0</commandName>
           <buttonImportance>Normal</buttonImportance>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
@@ -4197,7 +4197,6 @@
   </handlers>
   <excludedCommands>Close</excludedCommands>
   <excludedCommands>Create</excludedCommands>
-  <excludedCommands>Delete</excludedCommands>
   <height>30</height>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <autoSaveDataInSettings>Use</autoSaveDataInSettings>
