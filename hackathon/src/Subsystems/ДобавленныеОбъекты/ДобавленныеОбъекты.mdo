@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a10b6de8-d14c-4dd8-aed4-96d9b7505a8b">
+  <name>ДобавленныеОбъекты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Добавленные объекты</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.Обращения</content>
+  <content>Catalog.ИсточникиОбращений</content>
+  <content>Document.РаботаПоОбращению</content>
+  <content>Enum.СтатусыОбращения</content>
+  <content>Enum.ТипыОбращений</content>
+  <content>Enum.ТональностьОбращений</content>
+  <content>AccumulationRegister.ТрудозатратрыОбращений</content>
+  <content>InformationRegister.СостояниеОбращений</content>
+  <content>Catalog.Сотрудники</content>
+</mdclass:Subsystem>

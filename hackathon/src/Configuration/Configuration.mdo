@@ -32,7 +32,8 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
   <modalityUseMode>UseWithWarnings</modalityUseMode>
-  <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
+  <interfaceCompatibilityMode>Version8_5</interfaceCompatibilityMode>
+  <version85InterfaceMigrationMode>Use</version85InterfaceMigrationMode>
   <compatibilityMode>8.3.27</compatibilityMode>
   <languages uuid="8aa846f7-5a95-458f-bdec-d32feb7aafbc">
     <name>Русский</name>
@@ -43,6 +44,7 @@
     <languageCode>ru</languageCode>
   </languages>
   <subsystems>Subsystem.Администрирование</subsystems>
+  <subsystems>Subsystem.ДобавленныеОбъекты</subsystems>
   <subsystems>Subsystem.ПодключаемыеОтчетыИОбработки</subsystems>
   <subsystems>Subsystem.СтандартныеПодсистемы</subsystems>
   <styleItems>StyleItem.ВажнаяНадписьШрифт</styleItems>
@@ -320,6 +322,7 @@
   <commonPictures>CommonPicture.ОтправитьSMS</commonPictures>
   <commonPictures>CommonPicture.ОтправитьПолучитьПочту</commonPictures>
   <commonPictures>CommonPicture.ОтправитьЭлектронноеПисьмо</commonPictures>
+  <commonPictures>CommonPicture.ОтразитьЧасы</commonPictures>
   <commonPictures>CommonPicture.Ошибка32</commonPictures>
   <commonPictures>CommonPicture.Папка</commonPictures>
   <commonPictures>CommonPicture.ПапкаОблачногоСервиса</commonPictures>
@@ -1173,6 +1176,7 @@
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
   <commonForms>CommonForm.АдреснаяКнига</commonForms>
   <commonForms>CommonForm.БлокировкаРаботыСВнешнимиРесурсами</commonForms>
+  <commonForms>CommonForm.ВводЧасов</commonForms>
   <commonForms>CommonForm.Вопрос</commonForms>
   <commonForms>CommonForm.ВопросОбУстановкеВнешнейКомпоненты</commonForms>
   <commonForms>CommonForm.ВопросОбУстановкеРасширения1СПредприятия</commonForms>
@@ -1250,12 +1254,14 @@
   <catalogs>Catalog.ЗначенияСвойствОбъектовИерархия</catalogs>
   <catalogs>Catalog.ИдентификаторыОбъектовМетаданных</catalogs>
   <catalogs>Catalog.ИдентификаторыОбъектовРасширений</catalogs>
+  <catalogs>Catalog.ИсточникиОбращений</catalogs>
   <catalogs>Catalog.Календари</catalogs>
   <catalogs>Catalog.КлючиДоступа</catalogs>
   <catalogs>Catalog.МакетыПечатныхФорм</catalogs>
   <catalogs>Catalog.НаборыГруппДоступа</catalogs>
   <catalogs>Catalog.НаборыДополнительныхРеквизитовИСведений</catalogs>
   <catalogs>Catalog.НастройкиАвторизацииИнтернетСервисов</catalogs>
+  <catalogs>Catalog.Обращения</catalogs>
   <catalogs>Catalog.ПапкиФайлов</catalogs>
   <catalogs>Catalog.ПапкиЭлектронныхПисем</catalogs>
   <catalogs>Catalog.Пользователи</catalogs>
@@ -1264,6 +1270,7 @@
   <catalogs>Catalog.ПрофилиГруппДоступа</catalogs>
   <catalogs>Catalog.РолиИсполнителей</catalogs>
   <catalogs>Catalog.СообщениеSMSПрисоединенныеФайлы</catalogs>
+  <catalogs>Catalog.Сотрудники</catalogs>
   <catalogs>Catalog.СтраныМира</catalogs>
   <catalogs>Catalog.СтроковыеКонтактыВзаимодействий</catalogs>
   <catalogs>Catalog.ТелефонныйЗвонокПрисоединенныеФайлы</catalogs>
@@ -1281,6 +1288,7 @@
   <documents>Document.Встреча</documents>
   <documents>Document.ЗапланированноеВзаимодействие</documents>
   <documents>Document.НазначениеОпросов</documents>
+  <documents>Document.РаботаПоОбращению</documents>
   <documents>Document.СообщениеSMS</documents>
   <documents>Document.ТелефонныйЗвонок</documents>
   <documents>Document.ЭлектронноеПисьмоВходящее</documents>
@@ -1301,6 +1309,7 @@
   <enums>Enum.ПериодОчисткиФайлов</enums>
   <enums>Enum.ПорядокОбработчиковОбновления</enums>
   <enums>Enum.ПорядокОтветовНаЗапросыУведомленийОПрочтении</enums>
+  <enums>Enum.ПриоритетыОбращения</enums>
   <enums>Enum.ПровайдерыSMS</enums>
   <enums>Enum.РазмерыБумаги</enums>
   <enums>Enum.РазрешенияСканированногоИзображения</enums>
@@ -1323,17 +1332,20 @@
   <enums>Enum.СтатусыИзвлеченияТекстаФайлов</enums>
   <enums>Enum.СтатусыИсходящегоЭлектронногоПисьма</enums>
   <enums>Enum.СтатусыОбработчиковОбновления</enums>
+  <enums>Enum.СтатусыОбращения</enums>
   <enums>Enum.СтатусыЭлектронныхПисем</enums>
   <enums>Enum.ТипыВерсийОбъекта</enums>
   <enums>Enum.ТипыВопросовШаблонаАнкеты</enums>
   <enums>Enum.ТипыДанныхКэшаПрограммныхИнтерфейсов</enums>
   <enums>Enum.ТипыКонтактнойИнформации</enums>
+  <enums>Enum.ТипыОбращений</enums>
   <enums>Enum.ТипыОтветовНаВопрос</enums>
   <enums>Enum.ТипыПредопределенныхПапокПисем</enums>
   <enums>Enum.ТипыТабличныхВопросов</enums>
   <enums>Enum.ТипыТекстовЭлектронныхПисем</enums>
   <enums>Enum.ТипыФайловДляВстроенногоРедактора</enums>
   <enums>Enum.ТипыХраненияФайлов</enums>
+  <enums>Enum.ТональностьОбращений</enums>
   <enums>Enum.ФорматыВыгрузкиОбъектов</enums>
   <enums>Enum.ФорматыСканированногоИзображения</enums>
   <enums>Enum.ФорматыСохраненияОтчетов</enums>
@@ -1457,6 +1469,7 @@
   <informationRegisters>InformationRegister.СведенияОФайлах</informationRegisters>
   <informationRegisters>InformationRegister.СвойстваРасширений</informationRegisters>
   <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
+  <informationRegisters>InformationRegister.СостояниеОбращений</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияКонтактовВзаимодействий</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПапокПисем</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПредметовВзаимодействий</informationRegisters>
@@ -1470,6 +1483,7 @@
   <informationRegisters>InformationRegister.ФайлыВРабочемКаталоге</informationRegisters>
   <informationRegisters>InformationRegister.ФиксацияОбработкиДанныхОбработчиками</informationRegisters>
   <informationRegisters>InformationRegister.ХранилищеФайлов</informationRegisters>
+  <accumulationRegisters>AccumulationRegister.ТрудозатратрыОбращений</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ВопросыДляАнкетирования</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ОбъектыАдресацииЗадач</chartsOfCharacteristicTypes>

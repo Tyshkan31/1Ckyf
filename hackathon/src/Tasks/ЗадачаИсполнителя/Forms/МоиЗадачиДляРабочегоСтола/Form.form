@@ -565,6 +565,7 @@
       </extInfo>
     </items>
     <commandBarLocation>None</commandBarLocation>
+    <showCommandBar>false</showCommandBar>
     <autoCommandBar>
       <name>СписокКоманднаяПанель</name>
       <id>11</id>

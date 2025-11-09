@@ -823,6 +823,8 @@
             <autoMaxHeight>true</autoMaxHeight>
           </extInfo>
         </items>
+        <commandBarLocation>Top</commandBarLocation>
+        <showCommandBar>true</showCommandBar>
         <autoCommandBar>
           <name>СписокКоманднаяПанель</name>
           <id>3</id>
