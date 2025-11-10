@@ -16,4 +16,5 @@
   <content>AccumulationRegister.ТрудозатратыОбращений</content>
   <content>InformationRegister.СостояниеОбращений</content>
   <content>Catalog.Сотрудники</content>
+  <content>DataProcessor.ОбработкаЗапроса</content>
 </mdclass:Subsystem>
