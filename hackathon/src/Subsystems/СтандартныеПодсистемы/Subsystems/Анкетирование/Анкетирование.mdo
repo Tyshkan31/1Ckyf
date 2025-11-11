@@ -5,6 +5,7 @@
     <key>ru</key>
     <value>Анкетирование</value>
   </synonym>
+  <includeInCommandInterface>true</includeInCommandInterface>
   <content>Enum.ТипыОтветовНаВопрос</content>
   <content>ChartOfCharacteristicTypes.ВопросыДляАнкетирования</content>
   <content>Constant.ИспользоватьАнкетирование</content>

@@ -5,6 +5,7 @@
     <key>ru</key>
     <value>Стандартные подсистемы</value>
   </synonym>
+  <includeInCommandInterface>true</includeInCommandInterface>
   <subsystems>Анкетирование</subsystems>
   <subsystems>ВерсионированиеОбъектов</subsystems>
   <subsystems>БазоваяФункциональность</subsystems>

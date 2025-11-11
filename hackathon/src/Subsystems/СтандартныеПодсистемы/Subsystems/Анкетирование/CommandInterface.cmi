@@ -6,4 +6,16 @@
       <visible/>
     </visibilityFragments>
   </commandsVisibility>
+  <commandsPlacement>
+    <placementFragments>
+      <group>CommandGroup.Информация</group>
+      <commands>DataProcessor.ДоступныеАнкеты.StandardCommand.Open</commands>
+    </placementFragments>
+  </commandsPlacement>
+  <commandsOrder>
+    <orderFragments>
+      <group>CommandGroup.Информация</group>
+      <commands>DataProcessor.ДоступныеАнкеты.StandardCommand.Open</commands>
+    </orderFragments>
+  </commandsOrder>
 </cmi:CommandInterface>
