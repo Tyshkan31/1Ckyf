@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16671c45-2dbb-4407-8fbc-a4c1592cb753">
+  <producedTypes>
+    <objectType typeId="63a13099-b837-4370-a780-e4c75d27be2f" valueTypeId="fff0c967-73b5-4f61-8afe-24b07c3e86da"/>
+    <managerType typeId="90a99724-9d75-4f11-896c-00ce56c669b3" valueTypeId="3b785c6a-5799-463e-b536-67882076513e"/>
+  </producedTypes>
+  <name>КанбанДоска</name>
+  <synonym>
+    <key>ru</key>
+    <value>Канбан доска</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КанбанДоска.Form.Форма</defaultForm>
+  <forms uuid="101a80c2-cca4-4613-9c62-506fcfd6b94f">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9e66df0e-7175-40c8-863d-2d8995219d2e">
+    <name>js</name>
+    <synonym>
+      <key>ru</key>
+      <value>Js</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="f923260a-cc6f-4f3a-983a-4b9a560b8aaf">
+    <name>css_body</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css body</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="075a7220-3797-4d9d-9310-64af62886262">
+    <name>css_kanban_container</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css kanban container</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="eead1278-afb4-4947-af16-347601c4563e">
+    <name>css_category</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css category</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="5bb29d79-5aa0-4242-af41-bedf767af2c6">
+    <name>css_items_container</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css items container</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="1bbfd90b-a5da-4272-aeee-87abe855d08a">
+    <name>css_item</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css item</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="8303f2ce-5377-42f6-be05-c40679b770c8">
+    <name>css_load_button</name>
+    <synonym>
+      <key>ru</key>
+      <value>Css load button</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="5bd5a4f9-9597-4494-9849-38e7fe494d77">
+    <name>full_html</name>
+    <synonym>
+      <key>ru</key>
+      <value>Full html</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

@@ -1,0 +1,22 @@
+/* Контейнер задач — скролла здесь нет, скроллит колонка */
+.items-container {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: visible;
+  padding-bottom: 16px; /* «дно» для удобного дропа */
+}
+
+/* Приёмная зона дропа внизу */
+.items-container::after {
+  content: '';
+  display: block;
+  height: 30vh;
+}
+
+/* Индикатор позиции вставки */
+.drop-indicator {
+  height: 4px;
+  margin: 4px 2px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+}
