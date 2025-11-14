@@ -1430,6 +1430,7 @@
   <informationRegisters>InformationRegister.КодировкиФайлов</informationRegisters>
   <informationRegisters>InformationRegister.КонтактыВзаимодействий</informationRegisters>
   <informationRegisters>InformationRegister.КэшПрограммныхИнтерфейсов</informationRegisters>
+  <informationRegisters>InformationRegister.МетрикиSLA</informationRegisters>
   <informationRegisters>InformationRegister.НаборыЗначенийДоступа</informationRegisters>
   <informationRegisters>InformationRegister.НавыкиСотрудников</informationRegisters>
   <informationRegisters>InformationRegister.НаличиеФайлов</informationRegisters>
@@ -1459,6 +1460,7 @@
   <informationRegisters>InformationRegister.ПараметрыРаботыПрограммы</informationRegisters>
   <informationRegisters>InformationRegister.ПериодическиеСерверныеОповещения</informationRegisters>
   <informationRegisters>InformationRegister.ПериодыНерабочихДнейКалендаря</informationRegisters>
+  <informationRegisters>InformationRegister.ПоказателиSLAПоОбращениям</informationRegisters>
   <informationRegisters>InformationRegister.ПользовательскиеМакетыПечати</informationRegisters>
   <informationRegisters>InformationRegister.ПоставляемыеМакетыПечати</informationRegisters>
   <informationRegisters>InformationRegister.ПотокиОбновления</informationRegisters>

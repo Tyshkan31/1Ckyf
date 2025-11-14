@@ -18,4 +18,6 @@
   <content>Catalog.Сотрудники</content>
   <content>DataProcessor.ОбработкаЗапроса</content>
   <content>DataProcessor.КанбанДоска</content>
+  <content>InformationRegister.ПоказателиSLAПоОбращениям</content>
+  <content>InformationRegister.МетрикиSLA</content>
 </mdclass:Subsystem>
