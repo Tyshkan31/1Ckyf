@@ -1,0 +1,347 @@
+<script type="text/javascript">
+// ===== Канбан DnD + Динамический пересчёт счётчиков (ES5, совместимо с IE/Trident) =====
+
+var draggedItem = null;
+var dropIndicator = document.createElement('div');
+dropIndicator.className = 'drop-indicator';
+
+function hasClass(el, cls) {
+  if (!el || !el.className) return false;
+  return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+function findCategoryEl(fromEl) {
+  var el = fromEl;
+  while (el && el !== document) {
+    if (el.getAttribute && el.getAttribute('data-category-id')) return el;
+    if (hasClass(el, 'category') || hasClass(el, 'kanban-category')) return el;
+    el = el.parentNode;
+  }
+  return null;
+}
+
+function getItemsContainer(categoryEl) {
+  if (!categoryEl) return null;
+  var classNames = ['items-container', 'category-items', 'tasks-container', 'items', 'list'];
+  for (var i = 0; i < classNames.length; i++) {
+    var list = categoryEl.getElementsByClassName ? categoryEl.getElementsByClassName(classNames[i]) : null;
+    if (list && list.length) return list[0];
+  }
+  var ch = categoryEl.children || [];
+  for (var j = 0; j < ch.length; j++) {
+    try {
+      if (ch[j].getElementsByClassName && ch[j].getElementsByClassName('item').length) return ch[j];
+    } catch (e) {}
+  }
+  return null;
+}
+
+function getHeaderEl(categoryEl) {
+  if (!categoryEl) return null;
+  var node = null;
+  var headers = categoryEl.getElementsByClassName ? categoryEl.getElementsByClassName('category-header') : null;
+  if (headers && headers.length) node = headers[0];
+  if (!node) {
+    headers = categoryEl.getElementsByClassName ? categoryEl.getElementsByClassName('header') : null;
+    if (headers && headers.length) node = headers[0];
+  }
+  if (!node) {
+    var kids = categoryEl.children || [];
+    for (var i = 0; i < kids.length; i++) {
+      if (kids[i].tagName && kids[i].tagName.toLowerCase() === 'header') { node = kids[i]; break; }
+      if (hasClass(kids[i], 'title')) { node = kids[i]; break; }
+    }
+  }
+  if (!node) {
+    node = document.createElement('div');
+    node.className = 'category-header';
+    if (categoryEl.firstChild) categoryEl.insertBefore(node, categoryEl.firstChild);
+    else categoryEl.appendChild(node);
+  }
+  return node;
+}
+
+function getScrollTarget(categoryEl) { return categoryEl; }
+
+function onClickItem(event) {
+  var el = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  var itemId = '';
+  try { if (el && el.getAttribute) itemId = el.getAttribute('data-id') || ''; } catch (e) {}
+  pushEvent({ event: 'ClickItem', itemId: itemId });
+}
+
+function onDragStart(event) {
+  draggedItem = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  try {
+    if (event && event.dataTransfer && draggedItem && draggedItem.getAttribute) {
+      var id = draggedItem.getAttribute('data-id') || '';
+      event.dataTransfer.setData('text', id);
+      event.dataTransfer.setData('text/plain', id);
+    }
+  } catch (e) {}
+  setTimeout(function () { if (draggedItem && draggedItem.style) draggedItem.style.display = 'none'; }, 0);
+}
+
+function onDragEnd(event) {
+  var el = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  if (el && el.style) el.style.display = 'block';
+}
+
+function onDragEnter(event) {
+  var target = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  var category = findCategoryEl(target);
+  if (category) {
+    if (category.classList) category.classList.add('is-over');
+    else if (!hasClass(category, 'is-over')) category.className += ' is-over';
+  }
+}
+
+function onDragLeave(event) {
+  var target = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  var category = findCategoryEl(target);
+  if (!category) return;
+  var rel = event ? (event.relatedTarget || event.toElement) : null;
+  if (!rel || !category.contains || !category.contains(rel)) {
+    if (category.classList) category.classList.remove('is-over');
+    else category.className = category.className.replace(/\bis-over\b/, '');
+  }
+}
+
+function onDragOver(event) {
+  if (event && event.preventDefault) event.preventDefault();
+
+  var target = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  var categoryEl = findCategoryEl(target);
+  if (!categoryEl) return;
+
+  var container = getItemsContainer(categoryEl);
+  if (!container) return;
+
+  var scrollEl = getScrollTarget(categoryEl);
+  if (scrollEl && scrollEl.getBoundingClientRect) {
+    var rect = scrollEl.getBoundingClientRect();
+    var threshold = 40;
+    if (event && (event.clientY - rect.top < threshold)) scrollEl.scrollTop -= 12;
+    else if (event && (rect.bottom - event.clientY < threshold)) scrollEl.scrollTop += 12;
+  }
+
+  var items = container.getElementsByClassName ? container.getElementsByClassName('item') : [];
+  var visible = [];
+  for (var i = 0; i < items.length; i++) {
+    var el = items[i];
+    if (!el) continue;
+    var cs = (window.getComputedStyle ? window.getComputedStyle(el) : el.style);
+    if (cs.display !== 'none' && cs.visibility !== 'hidden') visible.push(el);
+  }
+
+  var mouseY = event ? event.clientY : 0;
+  var placed = false;
+
+  for (var k = 0; k < visible.length; k++) {
+    var r = visible[k].getBoundingClientRect ? visible[k].getBoundingClientRect() : null;
+    if (r && mouseY < r.top + r.height / 2) {
+      if (visible[k].previousSibling !== dropIndicator) {
+        container.insertBefore(dropIndicator, visible[k]);
+      }
+      placed = true;
+      break;
+    }
+  }
+
+  if (!placed) {
+    var loadMore = null;
+    var lmClasses = ['load-more-button', 'load-more', 'btn-load-more'];
+    for (var m = 0; m < lmClasses.length; m++) {
+      var list = container.getElementsByClassName ? container.getElementsByClassName(lmClasses[m]) : null;
+      if (list && list.length) { loadMore = list[0]; break; }
+    }
+    if (loadMore) container.insertBefore(dropIndicator, loadMore);
+    else container.appendChild(dropIndicator);
+  }
+}
+
+function onDrop(event) {
+  if (event && event.preventDefault) event.preventDefault();
+
+  var target = (event && (event.currentTarget || event.srcElement || event.target)) || this;
+  var categoryEl = findCategoryEl(target);
+  if (!categoryEl || !draggedItem) return;
+
+  var container = getItemsContainer(categoryEl);
+  if (!container) return;
+
+  var itemId = '';
+  try {
+    if (event && event.dataTransfer) {
+      itemId = event.dataTransfer.getData('text/plain') || event.dataTransfer.getData('text') || '';
+    }
+  } catch (e) {}
+  var categoryId = categoryEl.getAttribute ? (categoryEl.getAttribute('data-category-id') || '') : '';
+
+  if (dropIndicator.parentElement === container) container.insertBefore(draggedItem, dropIndicator);
+  else {
+    var loadMore = null;
+    var lmC = ['load-more-button', 'load-more', 'btn-load-more'];
+    for (var i = 0; i < lmC.length; i++) {
+      var l = container.getElementsByClassName ? container.getElementsByClassName(lmC[i]) : null;
+      if (l && l.length) { loadMore = l[0]; break; }
+    }
+    if (loadMore) container.insertBefore(draggedItem, loadMore);
+    else container.appendChild(draggedItem);
+  }
+
+  if (dropIndicator.parentNode) dropIndicator.parentNode.removeChild(dropIndicator);
+  if (draggedItem && draggedItem.style) draggedItem.style.display = 'block';
+  draggedItem = null;
+
+  if (categoryEl.classList) categoryEl.classList.remove('is-over');
+  else categoryEl.className = categoryEl.className.replace(/\bis-over\b/, '');
+
+  recalcCounts();
+  pushEvent({ event: 'DropItem', itemId: itemId, categoryId: categoryId });
+}
+
+function initStickyHeadersFallback() {
+  var categories = document.querySelectorAll ? document.querySelectorAll('[data-category-id], .category, .kanban-category') : [];
+  for (var i = 0; i < categories.length; i++) {
+    (function (cat) {
+      var header = getHeaderEl(cat);
+      if (!header) return;
+
+      header.style.transform = 'translateY(0)';
+      var ticking = false;
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        setTimeout(function () {
+          var st = cat.scrollTop || 0;
+          if (st > 0) {
+            if (header.classList) header.classList.add('pinned'); else if (!hasClass(header, 'pinned')) header.className += ' pinned';
+            header.style.transform = 'translateY(' + st + 'px)';
+          } else {
+            if (header.classList) header.classList.remove('pinned'); else header.className = header.className.replace(/\bpinned\b/, '');
+            header.style.transform = 'translateY(0)';
+          }
+          ticking = false;
+        }, 0);
+      }
+
+      if (cat.addEventListener) cat.addEventListener('scroll', onScroll, false);
+      if (window.addEventListener) window.addEventListener('resize', onScroll, false);
+      onScroll();
+    })(categories[i]);
+  }
+}
+
+// ===== Очередь событий для 1С =====
+var queue = [];
+var queueHead = -1;
+var queueTail = -1;
+var totalEventCount = 0;
+
+function pushEvent(dataEvent) {
+  if (queueHead === queueTail && queueHead > -1) { queueHead = -1; queueTail = -1; }
+  queue[queueTail + 1] = JSON.stringify(dataEvent);
+  queueTail = queueTail + 1;
+  totalEventCount = totalEventCount + 1;
+}
+
+function getEvent(index) { return queue[index]; }
+function getQueueHead() { return queueHead; }
+function getQueueTail() { return queueTail; }
+
+// Кнопка дозагрузки
+function onLoadMoreClick(buttonElement) {
+  var categoryElement = findCategoryEl(buttonElement);
+  var categoryId = categoryElement && categoryElement.getAttribute ? (categoryElement.getAttribute('data-category-id') || '') : '';
+  pushEvent({ event: 'LoadMore', categoryId: categoryId });
+  setTimeout(function () { recalcCounts(); }, 0);
+}
+
+// ===== Динамический пересчёт счётчиков =====
+function getVisibleItemCount(container) {
+  if (!container) return 0;
+  var items = container.getElementsByClassName ? container.getElementsByClassName('item') : [];
+  var cnt = 0;
+  for (var i = 0; i < items.length; i++) {
+    var el = items[i];
+    var cs = (window.getComputedStyle ? window.getComputedStyle(el) : el.style);
+    if (cs.display !== 'none' && cs.visibility !== 'hidden') cnt++;
+  }
+  return cnt;
+}
+
+function updateCategoryCount(categoryEl) {
+  var header = getHeaderEl(categoryEl);
+  var container = getItemsContainer(categoryEl);
+  if (!header || !container) return;
+
+  var count = getVisibleItemCount(container);
+
+  var badge = null;
+  var cands = ['category-count', 'category-count-badge', 'header-count', 'count'];
+  for (var i = 0; i < cands.length; i++) {
+    var list = header.getElementsByClassName ? header.getElementsByClassName(cands[i]) : null;
+    if (list && list.length) { badge = list[0]; break; }
+  }
+  if (!badge) {
+    badge = document.createElement('span');
+    badge.className = 'category-count-badge';
+    header.appendChild(badge);
+  }
+  if (badge.textContent !== undefined) badge.textContent = String(count);
+  else if (badge.innerText !== undefined) badge.innerText = String(count);
+}
+
+function recalcCounts() {
+  var categories = document.querySelectorAll ? document.querySelectorAll('[data-category-id], .category, .kanban-category') : [];
+  for (var i = 0; i < categories.length; i++) updateCategoryCount(categories[i]);
+}
+
+// Наблюдение за изменениями DOM
+var countsObserver = null;
+function initCountsObserver() {
+  try {
+    if (!window.MutationObserver) return;
+    var root = document.body;
+    countsObserver = new MutationObserver(function (mutations) {
+      var need = false;
+      for (var i = 0; i < mutations.length; i++) {
+        var m = mutations[i];
+        if (m.type === 'childList') {
+          var arr = [];
+          for (var a = 0; a < m.addedNodes.length; a++) arr.push(m.addedNodes[a]);
+          for (var b = 0; b < m.removedNodes.length; b++) arr.push(m.removedNodes[b]);
+          for (var c = 0; c < arr.length; c++) {
+            var n = arr[c];
+            if (n && n.nodeType === 1) {
+              if ((n.className && hasClass(n, 'item')) || (n.getElementsByClassName && n.getElementsByClassName('item').length)) { need = true; break; }
+            }
+          }
+          if (need) break;
+        } else if (m.type === 'attributes') {
+          var t = m.target;
+          if (t && t.className && hasClass(t, 'item')) {
+            if (m.attributeName === 'style' || m.attributeName === 'class') { need = true; break; }
+          }
+        }
+      }
+      if (need) recalcCounts();
+    });
+    countsObserver.observe(root, { childList: true, attributes: true, subtree: true, attributeFilter: ['style', 'class'] });
+  } catch (e) {}
+}
+
+function __kanban_init() {
+  initStickyHeadersFallback();
+  recalcCounts();
+  initCountsObserver();
+}
+
+if (document.readyState === 'loading') {
+  if (document.addEventListener) document.addEventListener('DOMContentLoaded', __kanban_init);
+} else {
+  try { __kanban_init(); } catch (e) {}
+}
+</script>

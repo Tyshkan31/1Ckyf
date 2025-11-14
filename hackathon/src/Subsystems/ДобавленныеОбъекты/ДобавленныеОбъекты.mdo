@@ -17,4 +17,5 @@
   <content>InformationRegister.СостояниеОбращений</content>
   <content>Catalog.Сотрудники</content>
   <content>DataProcessor.ОбработкаЗапроса</content>
+  <content>DataProcessor.КанбанДоска</content>
 </mdclass:Subsystem>

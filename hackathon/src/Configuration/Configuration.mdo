@@ -1380,6 +1380,7 @@
   <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеГрафиковРаботы</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеКалендарныхГрафиков</dataProcessors>
+  <dataProcessors>DataProcessor.КанбанДоска</dataProcessors>
   <dataProcessors>DataProcessor.КартаМаршрутаБизнесПроцесса</dataProcessors>
   <dataProcessors>DataProcessor.КонструкторФормул</dataProcessors>
   <dataProcessors>DataProcessor.НастройкиПользователей</dataProcessors>

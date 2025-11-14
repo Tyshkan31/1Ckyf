@@ -1,0 +1,46 @@
+/* Колонка (категория): прокрутка по вертикали на самой колонке, скролл визуально скрыт */
+.category {
+  background: rgba(152, 152, 152, 0.3);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  min-width: 250px;
+
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  overflow-y: auto;   /* важное: скроллим колонку */
+  overflow-x: hidden;
+  background-clip: padding-box;
+
+  /* скрыть скроллбар, прокрутка остаётся */
+  -ms-overflow-style: none;  /* IE/старый Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.category::-webkit-scrollbar { display: none; } /* Chrome/Safari/новый Edge */
+
+/* Шапка колонки — возвращаем «старый» фон и делаем её «прилипшей» через JS */
+.category-header {
+  position: relative;                 /* sticky не используем — IE не поддерживает */
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.5); /* как было изначально */
+  border-radius: 3px;
+  text-align: center;
+  will-change: transform;             /* плавнее при JS-фоллбеке */
+}
+.category-header h3 { margin: 0; padding: 3px; }
+.category-header p  { margin: 0; padding: 3px; }
+
+/* Визуал, когда «приклеено» (класс назначает JS) */
+.category-header.pinned {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Подсветка колонки при DnD */
+.category.is-over {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 0;
+}
