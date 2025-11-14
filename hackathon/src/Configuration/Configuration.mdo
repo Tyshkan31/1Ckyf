@@ -1430,6 +1430,7 @@
   <informationRegisters>InformationRegister.КонтактыВзаимодействий</informationRegisters>
   <informationRegisters>InformationRegister.КэшПрограммныхИнтерфейсов</informationRegisters>
   <informationRegisters>InformationRegister.НаборыЗначенийДоступа</informationRegisters>
+  <informationRegisters>InformationRegister.НавыкиСотрудников</informationRegisters>
   <informationRegisters>InformationRegister.НаличиеФайлов</informationRegisters>
   <informationRegisters>InformationRegister.НапоминанияПользователя</informationRegisters>
   <informationRegisters>InformationRegister.НаследованиеНастроекПравОбъектов</informationRegisters>

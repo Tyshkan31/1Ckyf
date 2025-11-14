@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="955b3a5c-b8ac-4a0e-9459-fb3ff5009f97">
+  <producedTypes>
+    <selectionType typeId="27fb8dd0-30a3-4aa6-9518-706a2b9c52a8" valueTypeId="24cc48ef-4950-4388-b647-0c994bb81312"/>
+    <listType typeId="51ff76de-baf2-4991-a7ae-418060a53c27" valueTypeId="a2f97b9f-e9f6-49b8-a848-7ad9fc23ce81"/>
+    <managerType typeId="a99db056-1099-4305-9b6f-829bcac5d129" valueTypeId="39e856e0-8c4c-46a6-b2a3-df8dc88120bb"/>
+    <recordSetType typeId="7f8a1b1e-4651-452c-b4af-eda83b8c2d8c" valueTypeId="f74297b0-ec4f-4109-93c7-ce24e7fa7066"/>
+    <recordKeyType typeId="885e81e4-7548-4f6a-9523-92270a589827" valueTypeId="95d7d474-f06d-4f1e-a202-38367b002dfd"/>
+    <recordType typeId="04423da2-a6ce-4321-a1d4-31dd5f8e6b08" valueTypeId="dc31f0a9-fdd1-4384-a5e7-3fca2e80bbf0"/>
+    <recordManagerType typeId="3d690b45-20c6-453f-826d-220a5cb8521e" valueTypeId="b8e56dff-7d1f-43cc-8838-ffbd0925bc90"/>
+  </producedTypes>
+  <name>НавыкиСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Навыки сотрудников</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="6a8b2c9a-22d0-4b1a-aa39-6af7ab9c5862">
+    <name>КоличествоВопросов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество вопросов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8f91f0f0-ea2c-403a-a94a-bd1207cda7bb">
+    <name>КоличествоБаллов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество баллов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1b023f5a-ace7-4f8a-9b5a-657327a0bac5">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
