@@ -8,7 +8,8 @@
 	СписокТрудозатрат.Параметры.УстановитьЗначениеПараметра("Исполнитель", Пользователи.ТекущийПользователь());
 	
 	Если Объект.Ссылка.Пустая() Тогда 
-		Объект.Статус = Перечисления.СтатусыОбращения.Новое;
+		Объект.Статус = Перечисления.СтатусыОбращения.Новое; 
+		Объект.ДатаСоздания = ТекущаяДатаСеанса();
 	КонецЕсли;
 	ПриоритетОбращения = Объект.Приоритет;
 	ИсполнительНазначен = Ложь;
@@ -113,6 +114,7 @@
 Процедура ЗаписатьСостояниеОбращенийНаСервере()  
 	
 	ДатаСеанса = ТекущаяДатаСеанса();
+	Объект.ДатаОбновления = ДатаСеанса;
 	СтруктураОбращения = Новый Структура("Обращение, Сотрудник, Статус, СлужебныйКомментарий");
 	СтруктураОбращения.Обращение = Объект.Ссылка;
 	СтруктураОбращения.Статус = Объект.Статус;
@@ -219,7 +221,283 @@
 	ЗаполнитьЗначенияСвойств(Запись, СтруктураОбращения);
 	Запись.Период = ДатаСеанса;
 	
-	НаборЗаписей.Записать();	
+	НаборЗаписей.Записать();
+	
 КонецПроцедуры
 
-#КонецОбласти
+#КонецОбласти   
+&НаКлиенте
+Процедура ПриОткрытии(Отказ)
+	
+	НастройкаТемы = ПолучитьТему(); 
+	
+	Если НастройкаТемы = ТемаКлиентскогоПриложения.Темная ИЛИ НастройкаТемы = ТемаКлиентскогоПриложения.Авто Тогда
+		ТемнаяТема = Истина; 
+	Иначе
+		ТемнаяТема = Ложь;
+	КонецЕсли;
+	ЗатраченоМин = ПолучитьТрудоЗатраты() * 60;
+	ОбновитьПрогресс(ЗатраченоМин,,, ТемнаяТема);
+	
+	Сотрудники = ПолучитьТрудоЗатратыПоСотрудникам(); 
+	//Сотрудники = Новый Массив;
+	//Сотрудники.Добавить(Новый Структура("ФИО,Часы", "Иванов Иван Иванович", 5.5));
+	//Сотрудники.Добавить(Новый Структура("ФИО,Часы", "Петров Пётр Петрович", 3));
+	//Сотрудники.Добавить(Новый Структура("ФИО,Часы", "Сидорова Мария Юрьевна", 8));
+	
+	ПолеСотрудникиHTML = ПолучитьHTMLВиджетаСотрудники(Сотрудники, ТемнаяТема);
+	
+КонецПроцедуры
+
+&НаСервере
+Функция ПолучитьТему()
+	КлючНастройкиКлиентскогоПриложения = "Общее/НастройкиКлиентскогоПриложения";
+	Возврат	ХранилищеСистемныхНастроек.Загрузить(КлючНастройкиКлиентскогоПриложения).ТемаКлиентскогоПриложения;
+КонецФункции
+
+&НаСервере
+Функция ПолучитьТрудоЗатраты()
+
+	Запрос = Новый Запрос;
+	Запрос.Текст = 
+		"ВЫБРАТЬ
+		|	ТрудозатратыОбращенийОбороты.ЧасыОборот КАК ЧасыОборот
+		|ИЗ
+		|	РегистрНакопления.ТрудозатратыОбращений.Обороты КАК ТрудозатратыОбращенийОбороты
+		|ГДЕ
+		|	ТрудозатратыОбращенийОбороты.Обращение = &Обращение";
+	
+	Запрос.УстановитьПараметр("Обращение", Объект.Ссылка);
+	
+	РезультатЗапроса = Запрос.Выполнить();
+	
+	ВыборкаДетальныеЗаписи = РезультатЗапроса.Выбрать();
+	
+	Пока ВыборкаДетальныеЗаписи.Следующий() Цикл
+		Возврат ВыборкаДетальныеЗаписи.ЧасыОборот;
+	КонецЦикла;	
+	
+КонецФункции
+
+&НаСервере
+Функция ПолучитьТрудоЗатратыПоСотрудникам()
+    Сотрудники = Новый Массив;
+	
+	Запрос = Новый Запрос;
+	Запрос.Текст = 
+		"ВЫБРАТЬ
+		|	ТрудозатратыОбращенийОбороты.Исполнитель КАК Исполнитель,
+		|	ТрудозатратыОбращенийОбороты.ЧасыОборот КАК ЧасыОборот
+		|ИЗ
+		|	РегистрНакопления.ТрудозатратыОбращений.Обороты КАК ТрудозатратыОбращенийОбороты
+		|ГДЕ
+		|	ТрудозатратыОбращенийОбороты.Обращение = &Обращение";
+	
+	Запрос.УстановитьПараметр("Обращение", Объект.Ссылка);
+	
+	РезультатЗапроса = Запрос.Выполнить();
+	
+	ВыборкаДетальныеЗаписи = РезультатЗапроса.Выбрать();
+	
+	Пока ВыборкаДетальныеЗаписи.Следующий() Цикл 
+		Сотрудники.Добавить(Новый Структура("ФИО,Часы", ВыборкаДетальныеЗаписи.Исполнитель, Число(ВыборкаДетальныеЗаписи.ЧасыОборот)));
+	КонецЦикла;
+	
+	Возврат Сотрудники;
+	
+КонецФункции
+
+&НаКлиенте
+Процедура ОбновитьПрогресс(ЗатраченоМин, ОценкаМин = Неопределено, ОсталосьМин = Неопределено, ТемнаяТема = Ложь) Экспорт
+	ПолеHTML = ПолучитьHTMLВиджета(ОценкаМин, ЗатраченоМин, ОсталосьМин, ТемнаяТема);
+КонецПроцедуры
+
+
+&НаКлиенте
+Функция ПолучитьHTMLВиджета(EstMin, LogMin, RemMin = Неопределено, ТемнаяТема = Ложь) Экспорт
+	// Если Осталось не задано, но есть Est и Log — считаем как max(0, Est - Log)
+	Если RemMin = Неопределено И ЗначениеЗаполнено(EstMin) И ЗначениеЗаполнено(LogMin) Тогда
+		RemMin = Макс(0, Число(EstMin) - Число(LogMin));
+	КонецЕсли;
+
+	// Пустая строка в data-* = «не определено»
+	СтEst = ?(ЗначениеЗаполнено(EstMin), Строка(Число(EstMin)), "");
+	СтRem = ?(ЗначениеЗаполнено(RemMin), Строка(Число(RemMin)), "");
+	СтLog = ?(ЗначениеЗаполнено(LogMin), Строка(Число(LogMin)), "");
+
+	// Параметры цвета зависят от темы
+	ЦветПодписи = ?(ТемнаяТема, "#e5e7eb", "#111");
+	ЦветЗнач    = ?(ТемнаяТема, "#f8fafc", "#111");
+	ЦветГлуше   = ?(ТемнаяТема, "#9ca3af", "#64748b");
+	ЦветТрек    = ?(ТемнаяТема, "#334155", "#e5e7eb");
+
+	Шаблон =
+"<!doctype html>
+|<html lang='ru'>
+|<head>
+|<meta charset='utf-8'/>
+|<meta name='viewport' content='width=device-width, initial-scale=1'/>
+|<style>
+|:root{
+|  --muted:%MUTED%;
+|  --track:%TRACK%;
+|  --est:#3b82f6; --rem:#f59e0b; --log:#22c55e; --over:#ef4444;
+|  font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+|}
+|body{margin:0;padding:10px}
+|.row{display:flex;align-items:center;gap:10px;margin:10px 0}
+|.label{width:90px;font-size:13px;color:%LBL%}
+|.track{flex:1;height:8px;background:var(--track);border-radius:999px;position:relative;overflow:hidden}
+|.fill{position:absolute;top:0;height:100%;width:0;border-radius:999px;transition:width .2s ease}
+|.fill.est{left:0;background:var(--est)}         /* оценка — 100% если >0 */
+|.fill.rem{left:0;background:var(--rem)}         /* осталось — слева направо */
+|.fill.log{left:0;background:var(--log)}         /* затрачено — слева направо */
+|.row.over .fill.log{background:var(--over)}
+|.value{width:120px;text-align:right;font-size:12px;color:%VAL%}
+|.value.muted{color:var(--muted)}
+|</style>
+|</head>
+|<body>
+|  <div id='w' data-est='%EST%' data-rem='%REM%' data-log='%LOG%'>
+|    <div class='row' id='row-est' data-kind=est>
+|      <span class='label'>Оценка</span>
+|      <div class='track'><div class='fill est' id='fill-est'></div></div>
+|      <span class='value' id='val-est'></span>
+|    </div>
+|    <div class='row' id='row-rem' data-kind=rem>
+|      <span class='label'>Осталось</span>
+|      <div class='track'><div class='fill rem' id='fill-rem'></div></div>
+|      <span class='value' id='val-rem'></span>
+|    </div>
+|    <div class='row' id='row-log' data-kind=log>
+|      <span class='label'>Затрачено</span>
+|      <div class='track'><div class='fill log' id='fill-log'></div></div>
+|      <span class='value' id='val-log'></span>
+|    </div>
+|  </div>
+|<script>
+|(function(){
+|  var w = document.getElementById('w');
+|  function rd(s){ return (s==null || s==='') ? null : Number(s); } // пустая строка -> null
+|  var est = rd(w.dataset.est);
+|  var log = rd(w.dataset.log);
+|  var rem = (w.dataset.rem==='' || w.dataset.rem==null) ? null : rd(w.dataset.rem);
+|  if(rem===null && est!==null && log!==null){ rem = Math.max(0, est - log); }
+|
+|  function clamp(n,min,max){return Math.max(min, Math.min(max,n));}
+|  function fmt(min){
+|    if(min===null) return 'Не определено';
+|    min = Math.max(0, Math.floor(+min));
+|    var d=Math.floor(min/1440), h=Math.floor((min%1440)/60), m=min%60, out=[];
+|    if(d) out.push(d+'d'); if(h) out.push(h+'h'); if(m || !out.length) out.push(m+'m'); return out.join(' ');
+|  }
+|  function width(kind, val, estVal){
+|    if(kind==='est') return (estVal!=null && estVal>0) ? 100 : 0;
+|    if(kind==='log'){
+|      if(estVal==null || estVal<=0) return (val!=null && val>0) ? 100 : 0; // без оценки — 100%
+|      if(val==null) return 0;
+|      return clamp((val/estVal)*100, 0, 100);
+|    }
+|    // rem
+|    if(estVal==null || estVal<=0 || val==null) return 0;
+|    return clamp((val/estVal)*100, 0, 100);
+|  }
+|  function setRow(kind, val, estVal, idFill, idVal, idRow){
+|    var fill = document.getElementById(idFill);
+|    var v    = document.getElementById(idVal);
+|    var row  = document.getElementById(idRow);
+|    fill.style.width = width(kind, val, estVal) + '%';
+|    v.textContent = fmt(val);
+|    v.classList.toggle('muted', val===null);
+|    if(kind==='log'){ row.classList.toggle('over', (estVal!=null && estVal>0 && val!=null && val>estVal)); }
+|  }
+|  setRow('est', est, est, 'fill-est', 'val-est', 'row-est');
+|  setRow('rem', rem, est, 'fill-rem', 'val-rem', 'row-rem');
+|  setRow('log', log, est, 'fill-log', 'val-log', 'row-log');
+|})();
+|</script>
+|</body>
+|</html>";
+
+	HTML = СтрЗаменить(Шаблон, "%EST%", СтEst);
+	HTML = СтрЗаменить(HTML,   "%REM%", СтRem);
+	HTML = СтрЗаменить(HTML,   "%LOG%", СтLog);
+
+	HTML = СтрЗаменить(HTML,   "%LBL%",   ЦветПодписи);
+	HTML = СтрЗаменить(HTML,   "%VAL%",   ЦветЗнач);
+	HTML = СтрЗаменить(HTML,   "%MUTED%", ЦветГлуше);
+	HTML = СтрЗаменить(HTML,   "%TRACK%", ЦветТрек);
+
+	Возврат HTML;
+КонецФункции 
+
+&НаКлиенте
+Функция ПолучитьHTMLВиджетаСотрудники(Данные, ТемнаяТема) Экспорт
+	//-- Цвета темы:
+	ЦветПодписи = ?(ТемнаяТема, "#e5e7eb", "#111");
+	ЦветЗнач    = ?(ТемнаяТема, "#f8fafc", "#111");
+	ЦветГлуше   = ?(ТемнаяТема, "#9ca3af", "#64748b");
+	ЦветТрек    = ?(ТемнаяТема, "#334155", "#e5e7eb");
+	ЦветПолоса  = ?(ТемнаяТема, "#44e372", "#22c55e");
+
+	//-- Формируем список строк
+	HTMLСписок = "";
+	Если ТипЗнч(Данные) = Тип("Массив") Тогда
+		Для Каждого Стр Из Данные Цикл
+			ФИО = Стр.ФИО;
+			Часы = Стр.Часы;
+			СтЧасы = ?(Часы = Неопределено, "<span class='value muted'>Не&nbsp;определено</span>", 
+				"<span class='value'>" + Формат(Число(Часы),"ЧГ=0.##") + " ч</span>");
+			HTMLСписок = HTMLСписок +
+			"<div class='row'><span class='label'>" + ФИО + "</span>" +
+			"<div class='track'><div class='fill'></div></div>" + СтЧасы + "</div>";
+		КонецЦикла;
+	ИначеЕсли ТипЗнч(Данные) = Тип("ТаблицаЗначений") Тогда
+		Для Каждого Р Из Данные Цикл
+			ФИО = Р.ФИО;
+			Часы = Р.Часы;
+			СтЧасы = ?(Часы = Неопределено, "<span class='value muted'>Не&nbsp;определено</span>", 
+				"<span class='value'>" + Формат(Число(Часы),"ЧГ=0.##") + " ч</span>");
+			HTMLСписок = HTMLСписок +
+			"<div class='row'><span class='label'>" + ФИО + "</span>" +
+			"<div class='track'><div class='fill'></div></div>" + СтЧасы + "</div>";
+		КонецЦикла;
+	КонецЕсли;
+
+	Шаблон =
+"<!doctype html>
+|<html lang='ru'>
+|<head>
+|<meta charset='utf-8'/>
+|<style>
+|:root{
+|  --track:%TRACK%;
+|  --main:%GREEN%;
+|  --lbl:%LBL%;
+|  --val:%VAL%;
+|  --muted:%MUTED%;
+|  font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+|}
+|body{margin:0;padding:10px;}
+|.row{display:flex;align-items:center;gap:10px;margin:9px 0}
+|.label{width:190px;font-size:14px;color:%LBL%}
+|.track{flex:1;height:8px;background:var(--track);border-radius:999px;position:relative;overflow:hidden}
+|.fill{position:absolute;left:0;top:0;height:100%;width:100%;background:var(--main);border-radius:999px}
+|.value{width:70px;text-align:right;font-size:13px;color:%VAL%}
+|.value.muted{color:var(--muted);}
+|</style>
+|</head>
+|<body>
+|" + HTMLСписок + "
+|</body>
+|</html>";
+
+	HTML = Шаблон;
+	HTML = СтрЗаменить(HTML, "%LBL%",   ЦветПодписи);
+	HTML = СтрЗаменить(HTML, "%VAL%",   ЦветЗнач);
+	HTML = СтрЗаменить(HTML, "%MUTED%", ЦветГлуше);
+	HTML = СтрЗаменить(HTML, "%TRACK%", ЦветТрек);
+	HTML = СтрЗаменить(HTML, "%GREEN%", ЦветПолоса);
+
+	Возврат HTML;
+КонецФункции
