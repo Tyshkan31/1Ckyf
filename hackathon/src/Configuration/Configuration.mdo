@@ -1176,6 +1176,7 @@
   <constants>Constant.УчетнаяЗаписьДляВосстановленияПароля</constants>
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
   <commonForms>CommonForm.АдреснаяКнига</commonForms>
+  <commonForms>CommonForm.АРМПользователя</commonForms>
   <commonForms>CommonForm.БлокировкаРаботыСВнешнимиРесурсами</commonForms>
   <commonForms>CommonForm.ВводЧасов</commonForms>
   <commonForms>CommonForm.Вопрос</commonForms>
