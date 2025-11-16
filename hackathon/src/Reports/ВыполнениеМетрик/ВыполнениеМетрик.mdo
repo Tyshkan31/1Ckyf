@@ -10,7 +10,17 @@
     <value>Выполнение метрик</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ВыполнениеМетрик.Form.ФормаОтчета</defaultForm>
   <mainDataCompositionSchema>Report.ВыполнениеМетрик.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="96c84a35-d7d1-4504-b794-cf9393d3432b">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="fd6dba39-060e-4f82-9957-798ddf28b7da">
     <name>ОсновнаяСхемаКомпоновкиДанных</name>
     <synonym>

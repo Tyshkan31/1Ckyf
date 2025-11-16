@@ -10,7 +10,17 @@
     <value>Трудозатраты обращений</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ТрудозатратыОбращений.Form.ФормаОтчета</defaultForm>
   <mainDataCompositionSchema>Report.ТрудозатратыОбращений.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="5ffc4545-340a-417d-a764-692c786eb496">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="8e2e870b-bc5e-4c44-8dee-3f38b60035bc">
     <name>ОсновнаяСхемаКомпоновкиДанных</name>
     <synonym>
