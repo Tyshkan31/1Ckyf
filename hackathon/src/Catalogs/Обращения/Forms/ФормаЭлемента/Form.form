@@ -124,6 +124,10 @@
                 <segments>Объект.Тип</segments>
               </dataPath>
               <titleLocation>Left</titleLocation>
+              <handlers>
+                <event>OnChange</event>
+                <name>ТипПриИзменении</name>
+              </handlers>
               <extendedTooltip>
                 <name>ТипРасширеннаяПодсказка</name>
                 <id>17</id>
@@ -598,6 +602,93 @@
     <items xsi:type="form:FormGroup">
       <name>ПраваяЧасть</name>
       <id>95</id>
+      <items xsi:type="form:FormGroup">
+        <name>Группа10</name>
+        <id>193</id>
+        <items xsi:type="form:FormField">
+          <name>ПолеSLA</name>
+          <id>195</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПолеSLA</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ПолеSLAРасширеннаяПодсказка</name>
+            <id>197</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПолеSLAКонтекстноеМеню</name>
+            <id>196</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <selectedItemsActionsPanel>
+            <name>ПолеSLAПанельДействийВыделенныхСтрок</name>
+            <id>198</id>
+            <fillStdCommands>true</fillStdCommands>
+            <horizontalAlign>Left</horizontalAlign>
+            <appearanceMode>CommandBar</appearanceMode>
+          </selectedItemsActionsPanel>
+          <type>HTMLDocumentField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:HtmlFieldExtInfo">
+            <handlers>
+              <event>DocumentComplete</event>
+              <name>ПолеHTMLДокументСформирован</name>
+            </handlers>
+            <width>50</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>4</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>SLA</value>
+        </title>
+        <width>50</width>
+        <extendedTooltip>
+          <name>Группа10РасширеннаяПодсказка</name>
+          <id>194</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <behavior>Collapsible</behavior>
+          <controlRepresentation>Button</controlRepresentation>
+          <representation>Auto</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>auto</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
       <items xsi:type="form:FormGroup">
         <name>Группа5</name>
         <id>91</id>
@@ -1866,6 +1957,42 @@
     <valueType>
       <types>String</types>
       <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПолеSLA</name>
+    <title>
+      <key>ru</key>
+      <value>Поле SLA</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДатаСеансаОткрытие</name>
+    <title>
+      <key>ru</key>
+      <value>Дата сеанса открытие</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers/>
     </valueType>
     <view>
       <common>true</common>

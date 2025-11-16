@@ -804,6 +804,7 @@
   <commonModules>CommonModule.СозданиеНаОснованииПереопределяемый</commonModules>
   <commonModules>CommonModule.СозданиеНаОснованииПовтИсп</commonModules>
   <commonModules>CommonModule.СРОО_ОбновлениеИнформационнойБазы</commonModules>
+  <commonModules>CommonModule.СРОО_ФоновыеЗадания</commonModules>
   <commonModules>CommonModule.СтандартныеПодсистемыВызовСервера</commonModules>
   <commonModules>CommonModule.СтандартныеПодсистемыГлобальный</commonModules>
   <commonModules>CommonModule.СтандартныеПодсистемыКлиент</commonModules>
