@@ -1359,6 +1359,7 @@
   <reports>Report.АнализПравДоступа</reports>
   <reports>Report.АналитическийОтчетПоАнкетированию</reports>
   <reports>Report.БизнесПроцессы</reports>
+  <reports>Report.ВыполнениеМетрик</reports>
   <reports>Report.ДлительностьОтложенногоОбновления</reports>
   <reports>Report.ЗависшиеЗадачи</reports>
   <reports>Report.Задания</reports>
@@ -1372,6 +1373,7 @@
   <reports>Report.ПрогрессОтложенногоОбновления</reports>
   <reports>Report.ПросроченныеЗадачи</reports>
   <reports>Report.СведенияОПользователях</reports>
+  <reports>Report.ТрудозатратыОбращений</reports>
   <reports>Report.УчастникиГруппДоступа</reports>
   <reports>Report.УчастникиГруппПользователей</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>

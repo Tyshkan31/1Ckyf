@@ -7,9 +7,9 @@
   </synonym>
   <includeInCommandInterface>true</includeInCommandInterface>
   <subsystems>Анкетирование</subsystems>
-  <subsystems>ВерсионированиеОбъектов</subsystems>
   <subsystems>БазоваяФункциональность</subsystems>
   <subsystems>БизнесПроцессыИЗадачи</subsystems>
+  <subsystems>ВерсионированиеОбъектов</subsystems>
   <subsystems>Взаимодействия</subsystems>
   <subsystems>ВыгрузкаОбъектовВФайлы</subsystems>
   <subsystems>ГрафикиРаботы</subsystems>

@@ -33,17 +33,22 @@
       <horizontalAlign>Left</horizontalAlign>
       <appearanceMode>CommandBar</appearanceMode>
     </selectedItemsActionsPanel>
-    <type>LabelField</type>
+    <type>InputField</type>
     <editMode>EnterOnInput</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:LabelFieldExtInfo">
+    <extInfo xsi:type="form:InputFieldExtInfo">
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
       <textColor xsi:type="core:ColorRef">
         <color>Style.ГиперссылкаЦвет</color>
       </textColor>
+      <textSize>Normal</textSize>
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
@@ -79,17 +84,22 @@
       <horizontalAlign>Left</horizontalAlign>
       <appearanceMode>CommandBar</appearanceMode>
     </selectedItemsActionsPanel>
-    <type>LabelField</type>
-    <groupHorizontalAlign>Center</groupHorizontalAlign>
+    <type>InputField</type>
     <editMode>EnterOnInput</editMode>
     <showInHeader>true</showInHeader>
     <headerHorizontalAlign>Left</headerHorizontalAlign>
     <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:LabelFieldExtInfo">
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
       <textColor xsi:type="core:ColorRef">
         <color>Style.ГиперссылкаЦвет</color>
       </textColor>
+      <textSize>Normal</textSize>
       <font xsi:type="core:FontRef">
         <font>Style.TextLevel3</font>
         <height>20.0</height>
@@ -1266,6 +1276,49 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>СписокТрудозатратДатаРабот</name>
+      <id>129</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокТрудозатрат.ДатаРабот</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>СписокТрудозатратДатаРаботРасширеннаяПодсказка</name>
+        <id>131</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СписокТрудозатратДатаРаботКонтекстноеМеню</name>
+        <id>130</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <selectedItemsActionsPanel>
+        <name>СписокТрудозатратДатаРаботПанельДействийВыделенныхСтрок</name>
+        <id>132</id>
+        <fillStdCommands>true</fillStdCommands>
+        <horizontalAlign>Left</horizontalAlign>
+        <appearanceMode>CommandBar</appearanceMode>
+      </selectedItemsActionsPanel>
+      <type>LabelField</type>
+      <editMode>Auto</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>СписокТрудозатратКомментарий</name>
       <id>125</id>
       <visible>true</visible>
@@ -1873,7 +1926,8 @@
       <queryText>ВЫБРАТЬ
 	ТрудозатратыОбращений.Часы КАК Часы,
 	ТрудозатратыОбращений.Регистратор КАК Регистратор,
-	ТрудозатратыОбращений.Комментарий КАК Комментарий
+	ТрудозатратыОбращений.Комментарий КАК Комментарий,
+	ТрудозатратыОбращений.ДатаРабот КАК ДатаРабот
 ИЗ
 	РегистрНакопления.ТрудозатратыОбращений КАК ТрудозатратыОбращений
 ГДЕ
@@ -1894,6 +1948,10 @@
       <fields xsi:type="schema:DataCompositionSchemaDataSetField">
         <dataPath>Комментарий</dataPath>
         <field>Комментарий</field>
+      </fields>
+      <fields xsi:type="schema:DataCompositionSchemaDataSetField">
+        <dataPath>ДатаРабот</dataPath>
+        <field>ДатаРабот</field>
       </fields>
       <parameters>
         <name>Обращение</name>

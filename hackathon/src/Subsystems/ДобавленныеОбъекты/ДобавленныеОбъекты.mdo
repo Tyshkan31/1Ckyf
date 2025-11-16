@@ -20,4 +20,6 @@
   <content>DataProcessor.КанбанДоска</content>
   <content>InformationRegister.ПоказателиSLAПоОбращениям</content>
   <content>InformationRegister.МетрикиSLA</content>
+  <content>Report.ТрудозатратыОбращений</content>
+  <content>Report.ВыполнениеМетрик</content>
 </mdclass:Subsystem>
