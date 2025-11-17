@@ -7,19 +7,23 @@
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.РаботаПоОбращению</content>
   <content>Catalog.Обращения</content>
   <content>Catalog.ИсточникиОбращений</content>
-  <content>Document.РаботаПоОбращению</content>
+  <content>Catalog.Сотрудники</content>
   <content>Enum.СтатусыОбращения</content>
+  <content>InformationRegister.СостояниеОбращений</content>
   <content>Enum.ТипыОбращений</content>
+  <content>DataProcessor.ОбработкаЗапроса</content>
   <content>Enum.ТональностьОбращений</content>
   <content>AccumulationRegister.ТрудозатратыОбращений</content>
-  <content>InformationRegister.СостояниеОбращений</content>
-  <content>Catalog.Сотрудники</content>
-  <content>DataProcessor.ОбработкаЗапроса</content>
   <content>DataProcessor.КанбанДоска</content>
   <content>InformationRegister.ПоказателиSLAПоОбращениям</content>
   <content>InformationRegister.МетрикиSLA</content>
+  <content>Catalog.НастройкиПодключения</content>
   <content>Report.ТрудозатратыОбращений</content>
   <content>Report.ВыполнениеМетрик</content>
+  <content>Report.СостояниеОбращений</content>
+  <content>Catalog.ПочтовыеСообщения</content>
+  <content>DataProcessor.ИнтеграцияТГ</content>
 </mdclass:Subsystem>

@@ -31,7 +31,6 @@
   <defaultLanguage>Language.Русский</defaultLanguage>
   <dataLockControlMode>Managed</dataLockControlMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
-  <modalityUseMode>UseWithWarnings</modalityUseMode>
   <interfaceCompatibilityMode>Version8_5</interfaceCompatibilityMode>
   <version85InterfaceMigrationMode>Use</version85InterfaceMigrationMode>
   <compatibilityMode>8.3.27</compatibilityMode>
@@ -669,6 +668,8 @@
   <commonModules>CommonModule.ЗапретРедактированияРеквизитовОбъектовПереопределяемый</commonModules>
   <commonModules>CommonModule.ЗапретРедактированияРеквизитовОбъектовСлужебный</commonModules>
   <commonModules>CommonModule.ЗапретРедактированияРеквизитовОбъектовСлужебныйКлиент</commonModules>
+  <commonModules>CommonModule.Интеграции</commonModules>
+  <commonModules>CommonModule.ИнтеграцииПовтИсп</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБСП</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБСПКлиент</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБСПКлиентПовтИсп</commonModules>
@@ -1154,6 +1155,7 @@
   <constants>Constant.ПервоеОбновлениеДоступаЗавершилось</constants>
   <constants>Constant.ПорядокОбрабатываемыхДанных</constants>
   <constants>Constant.ПоследнееОбновлениеДоступа</constants>
+  <constants>Constant.ПоследняяДатаПолученияПисем</constants>
   <constants>Constant.ПровайдерSMS</constants>
   <constants>Constant.ПроверятьИспользованиеУдаляемыхОбъектов</constants>
   <constants>Constant.ПутьКТомуБезУчетаРегиональныхНастроек</constants>
@@ -1235,6 +1237,7 @@
   <commonForms>CommonForm.СравнениеТабличныхДокументов</commonForms>
   <commonForms>CommonForm.УточнениеКонтактов</commonForms>
   <commonForms>CommonForm.ФайлыВТоме</commonForms>
+  <commonForms>CommonForm.Форма</commonForms>
   <commonForms>CommonForm.ФормаВыбораЦвета</commonForms>
   <commonForms>CommonForm.ФормаВыбораШрифта</commonForms>
   <commonForms>CommonForm.ФормаПоиска</commonForms>
@@ -1263,10 +1266,12 @@
   <catalogs>Catalog.НаборыГруппДоступа</catalogs>
   <catalogs>Catalog.НаборыДополнительныхРеквизитовИСведений</catalogs>
   <catalogs>Catalog.НастройкиАвторизацииИнтернетСервисов</catalogs>
+  <catalogs>Catalog.НастройкиПодключения</catalogs>
   <catalogs>Catalog.Обращения</catalogs>
   <catalogs>Catalog.ПапкиФайлов</catalogs>
   <catalogs>Catalog.ПапкиЭлектронныхПисем</catalogs>
   <catalogs>Catalog.Пользователи</catalogs>
+  <catalogs>Catalog.ПочтовыеСообщения</catalogs>
   <catalogs>Catalog.ПравилаОбработкиЭлектроннойПочты</catalogs>
   <catalogs>Catalog.ПроизводственныеКалендари</catalogs>
   <catalogs>Catalog.ПрофилиГруппДоступа</catalogs>
@@ -1308,6 +1313,7 @@
   <enums>Enum.ВидыФлажкаВАнкетах</enums>
   <enums>Enum.ДействияСФайламиПоДвойномуЩелчку</enums>
   <enums>Enum.ДополнительныеЗначенияДоступа</enums>
+  <enums>Enum.МоделиИИ</enums>
   <enums>Enum.ПериодОчисткиФайлов</enums>
   <enums>Enum.ПорядокОбработчиковОбновления</enums>
   <enums>Enum.ПорядокОтветовНаЗапросыУведомленийОПрочтении</enums>
@@ -1385,6 +1391,7 @@
   <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеГрафиковРаботы</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеКалендарныхГрафиков</dataProcessors>
+  <dataProcessors>DataProcessor.ИнтеграцияТГ</dataProcessors>
   <dataProcessors>DataProcessor.КанбанДоска</dataProcessors>
   <dataProcessors>DataProcessor.КартаМаршрутаБизнесПроцесса</dataProcessors>
   <dataProcessors>DataProcessor.КонструкторФормул</dataProcessors>
