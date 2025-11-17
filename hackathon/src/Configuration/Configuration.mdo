@@ -707,6 +707,7 @@
   <commonModules>CommonModule.ОбновлениеИнформационнойБазыСлужебный</commonModules>
   <commonModules>CommonModule.ОбновлениеИнформационнойБазыСлужебныйВызовСервера</commonModules>
   <commonModules>CommonModule.ОбновлениеИнформационнойБазыСлужебныйПовтИсп</commonModules>
+  <commonModules>CommonModule.ОбращенияТГ</commonModules>
   <commonModules>CommonModule.Обсуждения</commonModules>
   <commonModules>CommonModule.ОбсужденияКлиент</commonModules>
   <commonModules>CommonModule.ОбсужденияЛокализация</commonModules>
@@ -966,6 +967,7 @@
   <scheduledJobs>ScheduledJob.ОчисткаУстаревшихВерсийОбъектов</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОчисткаУстаревшихДанных</scheduledJobs>
   <scheduledJobs>ScheduledJob.ПолучениеИОтправкаЭлектронныхПисем</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ПолучениеОбращенийТГ</scheduledJobs>
   <scheduledJobs>ScheduledJob.ПолучениеСтатусовЭлектронныхПисем</scheduledJobs>
   <scheduledJobs>ScheduledJob.СинхронизацияФайлов</scheduledJobs>
   <scheduledJobs>ScheduledJob.СлияниеИндексаППД</scheduledJobs>
@@ -1462,6 +1464,7 @@
   <informationRegisters>InformationRegister.ОбновлениеКлючейДоступаТекущиеЗадания</informationRegisters>
   <informationRegisters>InformationRegister.ОбработчикиОбновления</informationRegisters>
   <informationRegisters>InformationRegister.ОбработчикиОбновленияОбщихДанных</informationRegisters>
+  <informationRegisters>InformationRegister.ОбращенияТГ</informationRegisters>
   <informationRegisters>InformationRegister.ОбщиеПоставляемыеМакетыПечати</informationRegisters>
   <informationRegisters>InformationRegister.ОсновныеПечатныеФормыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ОсновныеПечатныеФормыОбъектов</informationRegisters>

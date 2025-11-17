@@ -186,6 +186,24 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="7c21a5e4-46b5-4dc2-82a7-b6147b555f5f">
+    <name>ЧатИД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Чат ИД</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="1845c422-4628-44f2-8cf1-f939e5f91070">
     <producedTypes>
       <objectType typeId="7d77cfe6-cc77-4974-8c5a-080b33a55df5" valueTypeId="5642ca20-6f1e-4f89-ada0-d34f5b5ef97f"/>
