@@ -6,7 +6,6 @@
     <value>Добавленные объекты</value>
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
-  <includeInCommandInterface>true</includeInCommandInterface>
   <content>Document.РаботаПоОбращению</content>
   <content>Catalog.Обращения</content>
   <content>Catalog.ИсточникиОбращений</content>

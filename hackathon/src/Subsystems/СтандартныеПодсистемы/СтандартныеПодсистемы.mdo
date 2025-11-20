@@ -5,7 +5,6 @@
     <key>ru</key>
     <value>Стандартные подсистемы</value>
   </synonym>
-  <includeInCommandInterface>true</includeInCommandInterface>
   <subsystems>Анкетирование</subsystems>
   <subsystems>БазоваяФункциональность</subsystems>
   <subsystems>БизнесПроцессыИЗадачи</subsystems>

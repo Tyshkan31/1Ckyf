@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="442d0ede-7865-4adf-80b9-67458ec210fd">
+  <producedTypes>
+    <refType typeId="b96fd282-fa9d-4871-b3ef-7d0056534d02" valueTypeId="e058ad45-848d-4f17-946a-90b1478c2391"/>
+    <listType typeId="56e65725-8a65-4a81-a230-047fecc47d94" valueTypeId="11400452-054e-4fe0-a5c3-7eeee6069786"/>
+    <managerType typeId="fe84743b-1adb-4506-b5f3-e21ec397f1ef" valueTypeId="82be3e15-3baf-4798-921e-62087c6e9209"/>
+  </producedTypes>
+  <name>ИсточникиОбращений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Источники обращений</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="663217fd-0945-4005-b335-71092016c6a8">
+    <name>РучноеСоздание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ручное создание</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="98584df2-15e1-4fbe-b734-2f64dfce5e0a">
+    <name>СозданиеИзФормыОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создание из формы обработки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="af98a488-e7fb-47df-8b41-b7564d426b02">
+    <name>Телеграм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Телеграм</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="71c3e9f3-52da-492f-ac44-70a0f9ff81d5">
+    <name>Почта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Почта</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="80c5452f-0826-4e00-ad22-0c31d6057b1b">
+    <name>Сайт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сайт</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

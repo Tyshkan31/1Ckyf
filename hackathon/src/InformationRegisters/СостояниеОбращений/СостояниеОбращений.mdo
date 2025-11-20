@@ -19,6 +19,21 @@
   <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
   <mainFilterOnPeriod>true</mainFilterOnPeriod>
   <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8878895f-d555-427c-a298-a11c3908ce39">
+    <name>СтатусРесурс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус ресурс</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыОбращения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
   <attributes uuid="4e49054b-d94a-48bd-90ad-55f0b6bc3090">
     <name>СлужебныйКомментарий</name>
     <synonym>
