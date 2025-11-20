@@ -125,10 +125,6 @@
                 <segments>Объект.Тип</segments>
               </dataPath>
               <titleLocation>Left</titleLocation>
-              <handlers>
-                <event>OnChange</event>
-                <name>ТипПриИзменении</name>
-              </handlers>
               <extendedTooltip>
                 <name>ТипРасширеннаяПодсказка</name>
                 <id>17</id>
