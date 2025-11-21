@@ -40,4 +40,11 @@
       <value>Новое</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="7d667f49-f0b8-4a5e-96b5-b6398542c8cc">
+    <name>ВозвращеноКлиентом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвращено клиентом</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>

@@ -55,6 +55,25 @@
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
   </resources>
+  <resources uuid="73784733-65f4-4b87-acd0-f7c1ac39c0c1">
+    <name>ПовторнаяРеакция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Повторная реакция</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
   <dimensions uuid="c9b75619-0f7b-4311-9294-2dc4d0f15857">
     <name>Обращение</name>
     <synonym>

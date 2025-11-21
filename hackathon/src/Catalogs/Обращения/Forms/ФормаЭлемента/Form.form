@@ -660,7 +660,7 @@
             </handlers>
             <width>50</width>
             <autoMaxWidth>true</autoMaxWidth>
-            <height>4</height>
+            <height>6</height>
             <autoMaxHeight>true</autoMaxHeight>
             <horizontalStretch>true</horizontalStretch>
           </extInfo>
