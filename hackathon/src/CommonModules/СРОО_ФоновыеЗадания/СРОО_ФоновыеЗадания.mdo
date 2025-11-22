@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1ec34821-a734-4a64-9243-de8fed0328a8">
-  <name>СРОО_ФоновыеЗадания</name>
-  <synonym>
-    <key>ru</key>
-    <value>СРОО фоновые задания</value>
-  </synonym>
-  <server>true</server>
-</mdclass:CommonModule>
