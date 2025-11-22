@@ -1113,6 +1113,7 @@
   <constants>Constant.ИдентификаторИнформационнойБазы</constants>
   <constants>Constant.ИзвлекатьТекстыФайловНаСервере</constants>
   <constants>Constant.ИзменятьЗаданияЗаднимЧислом</constants>
+  <constants>Constant.ИспользованиеЛинийПоддержки</constants>
   <constants>Constant.ИспользоватьАнкетирование</constants>
   <constants>Constant.ИспользоватьБизнесПроцессыИЗадачи</constants>
   <constants>Constant.ИспользоватьВерсионированиеОбъектов</constants>
@@ -1318,6 +1319,7 @@
   <enums>Enum.ДействияСФайламиПоДвойномуЩелчку</enums>
   <enums>Enum.ДополнительныеЗначенияДоступа</enums>
   <enums>Enum.ИсточникиОбращений</enums>
+  <enums>Enum.ЛинииПоддержки</enums>
   <enums>Enum.МоделиИИ</enums>
   <enums>Enum.ПериодОчисткиФайлов</enums>
   <enums>Enum.ПорядокОбработчиковОбновления</enums>

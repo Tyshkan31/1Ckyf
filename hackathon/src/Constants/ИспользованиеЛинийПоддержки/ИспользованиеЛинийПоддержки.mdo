@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="01e5046c-4915-4877-8e7a-0e5610a17473">
+  <producedTypes>
+    <managerType typeId="ab90da00-97ea-484e-838d-bd343910fadb" valueTypeId="51445bf1-66da-4ea2-92e2-7a01e8856c1b"/>
+    <valueManagerType typeId="549dcd2e-67fb-44af-917a-b9af3d67527b" valueTypeId="0603b796-73a0-43ee-bb6b-2ebca255a723"/>
+    <valueKeyType typeId="ea55add1-3e03-49c5-a16e-008783c0c60e" valueTypeId="669e0cf0-3a5c-4088-a6d4-efae943e1f44"/>
+  </producedTypes>
+  <name>ИспользованиеЛинийПоддержки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование линий поддержки</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

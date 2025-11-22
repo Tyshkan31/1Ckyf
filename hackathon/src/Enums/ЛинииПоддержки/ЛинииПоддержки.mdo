@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec4d13a8-d72a-4a1f-ac49-1b79616afb83">
+  <producedTypes>
+    <refType typeId="5d2903be-0114-4988-a769-52e0e0d34e80" valueTypeId="d70396d2-087f-4ac3-b179-72683f1e795f"/>
+    <listType typeId="9b714635-90de-4697-b0ef-515d331bfd04" valueTypeId="fb8010d4-2f2c-460d-8c29-f73beb87dfa5"/>
+    <managerType typeId="a3c27e06-bacf-4340-9bb1-5945bfcd522d" valueTypeId="038be64e-b24a-48f1-afdb-79ff38bd947e"/>
+  </producedTypes>
+  <name>ЛинииПоддержки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Линии поддержки</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="e11eb682-c5c5-430b-bf1e-430fb9fa5859">
+    <name>Нулевая</name>
+    <synonym>
+      <key>ru</key>
+      <value>0-ая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="89e60c2b-4b3e-4939-ae3e-164f4cb9757f">
+    <name>Первая</name>
+    <synonym>
+      <key>ru</key>
+      <value>1-ая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="249b80bc-f64f-44c9-9105-d8e16baf3549">
+    <name>Вторая</name>
+    <synonym>
+      <key>ru</key>
+      <value>2-ая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9bfc774f-f275-4081-ae3c-efa5880476d8">
+    <name>Третья</name>
+    <synonym>
+      <key>ru</key>
+      <value>3-я</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
