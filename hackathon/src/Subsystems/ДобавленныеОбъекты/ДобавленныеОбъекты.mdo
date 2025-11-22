@@ -25,4 +25,5 @@
   <content>Report.СостояниеОбращений</content>
   <content>Catalog.ПочтовыеСообщения</content>
   <content>DataProcessor.ИнтеграцияТГ</content>
+  <content>Constant.ИспользованиеЛинийПоддержки</content>
 </mdclass:Subsystem>
