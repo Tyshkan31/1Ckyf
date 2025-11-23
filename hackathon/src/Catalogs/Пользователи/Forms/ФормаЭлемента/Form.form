@@ -1416,6 +1416,54 @@
               <textSize>Normal</textSize>
             </extInfo>
           </items>
+          <items xsi:type="form:FormField">
+            <name>ЛинияПоддержки</name>
+            <id>480</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ЛинияПоддержки</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ЛинияПоддержкиРасширеннаяПодсказка</name>
+              <id>482</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ЛинияПоддержкиКонтекстноеМеню</name>
+              <id>481</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <selectedItemsActionsPanel>
+              <name>ЛинияПоддержкиПанельДействийВыделенныхСтрок</name>
+              <id>483</id>
+              <fillStdCommands>true</fillStdCommands>
+              <horizontalAlign>Left</horizontalAlign>
+              <appearanceMode>CommandBar</appearanceMode>
+            </selectedItemsActionsPanel>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <textSize>Normal</textSize>
+            </extInfo>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1437,7 +1485,7 @@
           </extendedTooltip>
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
-            <group>HorizontalIfPossible</group>
+            <group>Vertical</group>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
