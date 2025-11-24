@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="141349d4-7484-4a03-be6b-7174549e8e6d">
+  <name>PUT_Request</name>
+  <synonym>
+    <key>ru</key>
+    <value>PUT_Request</value>
+  </synonym>
+  <rootURL>putRequest</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="6e420baf-cd46-49ce-8cd1-39f69dbee071">
+    <name>request</name>
+    <synonym>
+      <key>ru</key>
+      <value>Request</value>
+    </synonym>
+    <template>/put_element_edt</template>
+    <methods uuid="f6086c39-2cb7-4077-868e-b37580dccd82">
+      <name>PUT</name>
+      <synonym>
+        <key>ru</key>
+        <value>PUT</value>
+      </synonym>
+      <httpMethod>PUT</httpMethod>
+      <handler>requestPUT</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>
