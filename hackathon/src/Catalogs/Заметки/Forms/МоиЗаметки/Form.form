@@ -366,7 +366,7 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <commandName>Form.StandardCommand.OutputList</commandName>
+          <commandName>0</commandName>
           <buttonImportance>Normal</buttonImportance>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
@@ -416,7 +416,7 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <commandName>Form.StandardCommand.ListSettings</commandName>
+          <commandName>0</commandName>
           <buttonImportance>Normal</buttonImportance>
           <representation>Auto</representation>
           <autoMaxWidth>true</autoMaxWidth>
@@ -667,28 +667,13 @@
   </handlers>
   <excludedCommands>Abort</excludedCommands>
   <excludedCommands>Cancel</excludedCommands>
-  <excludedCommands>CancelSearch</excludedCommands>
   <excludedCommands>Close</excludedCommands>
-  <excludedCommands>Copy</excludedCommands>
-  <excludedCommands>CreateFolder</excludedCommands>
-  <excludedCommands>Delete</excludedCommands>
-  <excludedCommands>DynamicListStandardSettings</excludedCommands>
-  <excludedCommands>Find</excludedCommands>
-  <excludedCommands>HierarchicalList</excludedCommands>
   <excludedCommands>Ignore</excludedCommands>
-  <excludedCommands>LevelDown</excludedCommands>
-  <excludedCommands>LevelUp</excludedCommands>
-  <excludedCommands>List</excludedCommands>
-  <excludedCommands>LoadDynamicListSettings</excludedCommands>
-  <excludedCommands>MoveItem</excludedCommands>
   <excludedCommands>No</excludedCommands>
   <excludedCommands>OK</excludedCommands>
-  <excludedCommands>Refresh</excludedCommands>
   <excludedCommands>RestoreValues</excludedCommands>
   <excludedCommands>Retry</excludedCommands>
-  <excludedCommands>SaveDynamicListSettings</excludedCommands>
   <excludedCommands>SaveValues</excludedCommands>
-  <excludedCommands>Tree</excludedCommands>
   <excludedCommands>Yes</excludedCommands>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>

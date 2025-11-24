@@ -119,6 +119,13 @@
         <value>000000002</value>
       </code>
     </items>
+    <items id="bc62a136-6fce-48d1-8f10-15b750489387">
+      <name>AmoCRM</name>
+      <description>Amo CRM</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
   </predefined>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
@@ -195,6 +202,7 @@
         <length>1024</length>
       </stringQualifiers>
     </type>
+    <passwordMode>true</passwordMode>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue">

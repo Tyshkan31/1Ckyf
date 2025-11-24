@@ -2038,9 +2038,6 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <excludedCommands>Change</excludedCommands>
-  <excludedCommands>Find</excludedCommands>
-  <excludedCommands>FindByCurrentValue</excludedCommands>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>

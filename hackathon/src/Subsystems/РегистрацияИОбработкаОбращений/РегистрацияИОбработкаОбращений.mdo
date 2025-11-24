@@ -9,12 +9,13 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Catalog.Обращения</content>
   <content>InformationRegister.МетрикиSLA</content>
+  <content>Catalog.НастройкиПодключения</content>
   <content>Report.СостояниеОбращений</content>
   <content>Report.ТрудозатратыОбращений</content>
+  <content>Catalog.ШаблоныАнкет</content>
   <content>Document.Анкета</content>
   <content>Document.НазначениеОпросов</content>
-  <content>Catalog.ШаблоныСообщений</content>
-  <content>Catalog.ШаблоныАнкет</content>
   <content>Catalog.Сотрудники</content>
+  <content>Catalog.ШаблоныСообщений</content>
   <subsystems>Сервис</subsystems>
 </mdclass:Subsystem>

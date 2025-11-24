@@ -961,6 +961,7 @@
   <scheduledJobs>ScheduledJob.МониторингЗадач</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбновлениеДоступаНаУровнеЗаписей</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбновлениеИндексаППД</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ОбновлениеКонтактнойИнформацииCRM</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбновлениеСтатусовДоставкиSMS</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбработкаСервисовИнтеграции</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОтложенноеОбновлениеИБ</scheduledJobs>
@@ -1267,6 +1268,7 @@
   <catalogs>Catalog.ИдентификаторыОбъектовРасширений</catalogs>
   <catalogs>Catalog.ИсточникиОбращений</catalogs>
   <catalogs>Catalog.Календари</catalogs>
+  <catalogs>Catalog.КлиентыCRM</catalogs>
   <catalogs>Catalog.КлючиДоступа</catalogs>
   <catalogs>Catalog.МакетыПечатныхФорм</catalogs>
   <catalogs>Catalog.НаборыГруппДоступа</catalogs>

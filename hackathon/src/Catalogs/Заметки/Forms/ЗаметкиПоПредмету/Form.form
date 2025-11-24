@@ -535,13 +535,6 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <excludedCommands>CreateFolder</excludedCommands>
-  <excludedCommands>HierarchicalList</excludedCommands>
-  <excludedCommands>LevelDown</excludedCommands>
-  <excludedCommands>LevelUp</excludedCommands>
-  <excludedCommands>List</excludedCommands>
-  <excludedCommands>MoveItem</excludedCommands>
-  <excludedCommands>Tree</excludedCommands>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <autoSaveDataInSettings>Use</autoSaveDataInSettings>
   <saveWindowSettings>true</saveWindowSettings>

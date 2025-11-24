@@ -7823,7 +7823,6 @@
     <event>BeforeLoadDataFromSettingsAtServer</event>
     <name>ПередЗагрузкойДанныхИзНастроекНаСервере</name>
   </handlers>
-  <excludedCommands>Refresh</excludedCommands>
   <windowOpeningMode>DontBlock</windowOpeningMode>
   <autoSaveDataInSettings>Use</autoSaveDataInSettings>
   <saveDataInSettings>UseList</saveDataInSettings>

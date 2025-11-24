@@ -6,14 +6,14 @@
     <value>Добавленные объекты</value>
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
-  <content>Document.РаботаПоОбращению</content>
   <content>Catalog.Обращения</content>
+  <content>Document.РаботаПоОбращению</content>
   <content>Catalog.ИсточникиОбращений</content>
-  <content>Catalog.Сотрудники</content>
   <content>Enum.СтатусыОбращения</content>
-  <content>InformationRegister.СостояниеОбращений</content>
-  <content>Enum.ТипыОбращений</content>
+  <content>Catalog.Сотрудники</content>
   <content>DataProcessor.ОбработкаЗапроса</content>
+  <content>Enum.ТипыОбращений</content>
+  <content>InformationRegister.СостояниеОбращений</content>
   <content>Enum.ТональностьОбращений</content>
   <content>AccumulationRegister.ТрудозатратыОбращений</content>
   <content>DataProcessor.КанбанДоска</content>
@@ -21,9 +21,9 @@
   <content>InformationRegister.МетрикиSLA</content>
   <content>Catalog.НастройкиПодключения</content>
   <content>Report.ТрудозатратыОбращений</content>
+  <content>Constant.ИспользованиеЛинийПоддержки</content>
   <content>Report.ВыполнениеМетрик</content>
   <content>Report.СостояниеОбращений</content>
   <content>Catalog.ПочтовыеСообщения</content>
   <content>DataProcessor.ИнтеграцияТГ</content>
-  <content>Constant.ИспользованиеЛинийПоддержки</content>
 </mdclass:Subsystem>

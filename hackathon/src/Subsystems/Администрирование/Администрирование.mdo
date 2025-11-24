@@ -15,23 +15,28 @@
     <picture>CommonPicture.РазделАдминистрирование</picture>
   </picture>
   <content>CommonCommand.НастройкаСистемнойУчетнойЗаписиЭлектроннойПочты</content>
+  <content>Catalog.ГруппыДоступа</content>
   <content>DataProcessor.ЖурналРегистрации</content>
   <content>DataProcessor.РегламентныеИФоновыеЗадания</content>
+  <content>Catalog.ПрофилиГруппДоступа</content>
   <content>DataProcessor.УдалениеПомеченныхОбъектов</content>
-  <content>DataProcessor.НастройкиПользователей</content>
+  <content>Catalog.ВидыКонтактнойИнформации</content>
   <content>Catalog.Пользователи</content>
-  <content>Catalog.ГруппыДоступа</content>
+  <content>DataProcessor.НастройкиПользователей</content>
   <content>Catalog.ГруппыПользователей</content>
   <content>Catalog.ВнешниеПользователи</content>
+  <content>DataProcessor.ПереносФайлов</content>
+  <content>CommonForm.НастройкаКомандПечати</content>
   <content>Catalog.ГруппыВнешнихПользователей</content>
   <content>Catalog.ТомаХраненияФайлов</content>
-  <content>Catalog.ВидыКонтактнойИнформации</content>
   <content>Catalog.НаборыДополнительныхРеквизитовИСведений</content>
+  <content>CommonForm.Расширения</content>
   <content>InformationRegister.ПользовательскиеМакетыПечати</content>
   <content>Catalog.УчетныеЗаписиЭлектроннойПочты</content>
-  <content>Catalog.ПрофилиГруппДоступа</content>
   <content>CommonForm.ОписаниеИзмененийПрограммы</content>
   <content>InformationRegister.ИсполнителиЗадач</content>
+  <content>InformationRegister.НастройкиВерсионированияОбъектов</content>
+  <content>Report.ОбъемНенужныхФайлов</content>
   <content>DataProcessor.АвтоматическоеИзвлечениеТекстов</content>
   <content>CommonPicture.РазделАдминистрирование48</content>
   <content>DataProcessor.ПанельАдминистрированияБСП</content>
@@ -40,18 +45,14 @@
   <content>CommonForm.НастройкаОтправкиSMS</content>
   <content>DataProcessor.ГрупповоеИзменениеРеквизитов</content>
   <content>DataProcessor.РезультатыОбновленияПрограммы</content>
-  <content>InformationRegister.НастройкиВерсионированияОбъектов</content>
-  <content>DataProcessor.ПереносФайлов</content>
-  <content>Report.ОбъемНенужныхФайлов</content>
+  <content>CommonForm.НастройкиВходаПользователей</content>
   <content>Report.ПрогрессОтложенногоОбновления</content>
-  <content>CommonForm.НастройкаКомандПечати</content>
-  <content>CommonForm.Расширения</content>
   <content>InformationRegister.НастройкиОчисткиФайлов</content>
   <content>CommonCommand.ВремяВПриложении</content>
-  <content>CommonForm.НастройкиВходаПользователей</content>
   <content>DataProcessor.ПодключениеОбсуждений</content>
   <content>Catalog.ШаблоныСообщений</content>
   <content>CommonForm.ВосстановлениеПаролей</content>
   <content>Report.ДлительностьОтложенногоОбновления</content>
+  <content>Catalog.КлиентыCRM</content>
   <subsystems>КонтрольРаботыПользователей</subsystems>
 </mdclass:Subsystem>
