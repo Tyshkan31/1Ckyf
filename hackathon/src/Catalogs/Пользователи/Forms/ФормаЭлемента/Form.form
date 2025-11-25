@@ -1416,6 +1416,37 @@
               <textSize>Normal</textSize>
             </extInfo>
           </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Имя</value>
+          </title>
+          <extendedTooltip>
+            <name>ГруппаИмяРасширеннаяПодсказка</name>
+            <id>410</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаНазначение</name>
+          <id>488</id>
           <items xsi:type="form:FormField">
             <name>ЛинияПоддержки</name>
             <id>480</id>
@@ -1427,6 +1458,10 @@
             <dataPath xsi:type="form:DataPath">
               <segments>Объект.ЛинияПоддержки</segments>
             </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ЛинияПоддержкиПриИзменении</name>
+            </handlers>
             <extendedTooltip>
               <name>ЛинияПоддержкиРасширеннаяПодсказка</name>
               <id>482</id>
@@ -1464,6 +1499,58 @@
               <textSize>Normal</textSize>
             </extInfo>
           </items>
+          <items xsi:type="form:FormField">
+            <name>Специализация</name>
+            <id>484</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Специализация</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>СпециализацияПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>СпециализацияРасширеннаяПодсказка</name>
+              <id>486</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СпециализацияКонтекстноеМеню</name>
+              <id>485</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <selectedItemsActionsPanel>
+              <name>СпециализацияПанельДействийВыделенныхСтрок</name>
+              <id>487</id>
+              <fillStdCommands>true</fillStdCommands>
+              <horizontalAlign>Left</horizontalAlign>
+              <appearanceMode>CommandBar</appearanceMode>
+            </selectedItemsActionsPanel>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <textSize>Normal</textSize>
+            </extInfo>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1471,11 +1558,11 @@
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Имя</value>
+            <value>Группа назначение</value>
           </title>
           <extendedTooltip>
-            <name>ГруппаИмяРасширеннаяПодсказка</name>
-            <id>410</id>
+            <name>ГруппаНазначениеРасширеннаяПодсказка</name>
+            <id>489</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1486,6 +1573,8 @@
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
             <group>Vertical</group>
+            <behavior>Auto</behavior>
+            <representation>Auto</representation>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
             <throughAlign>Auto</throughAlign>
