@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03ccfa52-ce6c-4157-91ea-123c642664fd">
+  <producedTypes>
+    <objectType typeId="72807700-575c-4638-81b1-340a288be5b2" valueTypeId="db811bc6-aeec-4ea9-9ff0-22f95e5053c5"/>
+    <managerType typeId="a740d4ad-780e-4eef-9061-1df5c798b477" valueTypeId="0c2b1431-96ca-438f-8a6d-02026a7acd67"/>
+  </producedTypes>
+  <name>МониторингSLA</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг SLA</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.МониторингSLA.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="e6741b31-1c5e-4adc-b1c0-c3fb881e7003">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

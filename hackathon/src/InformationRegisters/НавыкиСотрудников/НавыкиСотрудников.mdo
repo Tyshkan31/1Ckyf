@@ -71,4 +71,20 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <mainFilter>true</mainFilter>
   </dimensions>
+  <dimensions uuid="1d875ef5-d5bc-4ebf-8311-96dc70038c88">
+    <name>ТипКомпетенции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип компетенции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыКомпетенцийСотрудников</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
 </mdclass:InformationRegister>

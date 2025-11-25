@@ -522,6 +522,21 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="762491cf-add8-4d0f-be64-abdef5491208">
+    <name>ТипКомпетенции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип компетенции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыКомпетенцийСотрудников</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="511727f3-b757-4e5b-b7d7-166917029787">
     <producedTypes>
       <objectType typeId="9ade7ea2-ff3d-4a8c-8a85-d12485c5bc1d" valueTypeId="25f3fa30-37bc-42de-ac61-54b83d36a730"/>

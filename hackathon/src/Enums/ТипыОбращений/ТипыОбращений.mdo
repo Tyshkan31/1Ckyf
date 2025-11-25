@@ -12,32 +12,18 @@
   </synonym>
   <quickChoice>true</quickChoice>
   <choiceMode>BothWays</choiceMode>
-  <enumValues uuid="16be8620-3f99-4e96-8a38-728f0abfcca2">
-    <name>ТехническаяОшибка</name>
+  <enumValues uuid="4427fce8-7db7-48dc-9561-3c7f20277e0b">
+    <name>НастройкаПрограмм</name>
     <synonym>
       <key>ru</key>
-      <value>Техническая ошибка</value>
+      <value>Настройка программ</value>
     </synonym>
   </enumValues>
-  <enumValues uuid="a87991f1-8ca4-49b7-945b-0892c08c5126">
-    <name>ВопросПоОплате</name>
+  <enumValues uuid="65407cac-b1eb-43b7-bdab-9ca343225cf5">
+    <name>ИсправлениеТехническихФункциональныхОшибок</name>
     <synonym>
       <key>ru</key>
-      <value>Вопрос по оплате</value>
-    </synonym>
-  </enumValues>
-  <enumValues uuid="0715ca7b-fb95-4899-86a9-95242200690c">
-    <name>Предложение</name>
-    <synonym>
-      <key>ru</key>
-      <value>Предложение</value>
-    </synonym>
-  </enumValues>
-  <enumValues uuid="81e19ff9-f3d5-4dea-a502-606bff026801">
-    <name>Жалоба</name>
-    <synonym>
-      <key>ru</key>
-      <value>Жалоба</value>
+      <value>Исправление технических/функциональных ошибок</value>
     </synonym>
   </enumValues>
   <enumValues uuid="4be7b222-a16d-4a1b-b4f0-aeecce86dfb2">
@@ -45,6 +31,27 @@
     <synonym>
       <key>ru</key>
       <value>Прочее</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0eaad2b3-17be-41a6-921b-75e5f3debe26">
+    <name>Администрирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администрирование</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0d8798a0-7589-467b-b580-1fd624e05c0c">
+    <name>Консультация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Консультация</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="49f84a40-6850-4284-b9cf-a06810a178c9">
+    <name>Доработка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доработка</value>
     </synonym>
   </enumValues>
 </mdclass:Enum>

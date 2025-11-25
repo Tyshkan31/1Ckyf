@@ -1355,6 +1355,7 @@
   <enums>Enum.ТипыВерсийОбъекта</enums>
   <enums>Enum.ТипыВопросовШаблонаАнкеты</enums>
   <enums>Enum.ТипыДанныхКэшаПрограммныхИнтерфейсов</enums>
+  <enums>Enum.ТипыКомпетенцийСотрудников</enums>
   <enums>Enum.ТипыКонтактнойИнформации</enums>
   <enums>Enum.ТипыОбращений</enums>
   <enums>Enum.ТипыОтветовНаВопрос</enums>
@@ -1382,6 +1383,7 @@
   <reports>Report.Задания</reports>
   <reports>Report.Задачи</reports>
   <reports>Report.ЗадачиИстекающиеНаДату</reports>
+  <reports>Report.МониторингSLA</reports>
   <reports>Report.ОбъемНенужныхФайлов</reports>
   <reports>Report.ПользователиПоПодразделениям</reports>
   <reports>Report.ПраваДоступа</reports>

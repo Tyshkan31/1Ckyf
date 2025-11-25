@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="398c06f7-82a6-49dd-8160-e0f884a5f082">
+  <producedTypes>
+    <refType typeId="7e23ac7a-10f4-4a9f-b201-c8b3c59a031c" valueTypeId="941f60ba-e615-46f3-9848-f1462660bf53"/>
+    <listType typeId="85130acf-37b7-4b85-bac5-c3edb4888eb5" valueTypeId="eb6a04c5-3efb-4af6-9f93-e75fdddde030"/>
+    <managerType typeId="f5f92290-b826-4c4d-9737-a47f34b10b14" valueTypeId="09bd1a27-4b4e-4359-8cd2-80791e0c4393"/>
+  </producedTypes>
+  <name>ТипыКомпетенцийСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы компетенций сотрудников</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="76e35453-bf28-434d-8bd4-c7ba2052f5c4">
+    <name>ЗнанияКонфигурации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Знания конфигурации</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e6cf8c4e-b0bf-4753-88cd-cc09ce128bb4">
+    <name>Администрирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администрирование</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="021e1468-b188-40b1-a3cf-b801d003a106">
+    <name>НавыкиДоработок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Навыки доработок</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
