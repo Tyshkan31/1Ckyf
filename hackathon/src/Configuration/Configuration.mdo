@@ -1382,6 +1382,7 @@
   <reports>Report.Задания</reports>
   <reports>Report.Задачи</reports>
   <reports>Report.ЗадачиИстекающиеНаДату</reports>
+  <reports>Report.МониторингSLA</reports>
   <reports>Report.ОбъемНенужныхФайлов</reports>
   <reports>Report.ПользователиПоПодразделениям</reports>
   <reports>Report.ПраваДоступа</reports>
