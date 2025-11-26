@@ -21,7 +21,6 @@
   <fullTextSearch>Use</fullTextSearch>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
-  <owners>Catalog.ИсточникиОбращений</owners>
   <codeLength>9</codeLength>
   <descriptionLength>150</descriptionLength>
   <codeType>String</codeType>
@@ -38,6 +37,7 @@
       <value>Источник</value>
     </synonym>
     <type>
+      <types>CatalogRef.ИсточникиОбращений</types>
       <types>EnumRef.ИсточникиОбращений</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
