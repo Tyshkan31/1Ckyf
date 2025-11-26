@@ -726,6 +726,8 @@
   <commonModules>CommonModule.ОбщегоНазначенияПереопределяемый</commonModules>
   <commonModules>CommonModule.ОбщегоНазначенияСлужебныйКлиент</commonModules>
   <commonModules>CommonModule.ОбщегоНазначенияСлужебныйКлиентСервер</commonModules>
+  <commonModules>CommonModule.ОповещенияКлиент</commonModules>
+  <commonModules>CommonModule.ОповещенияСервер</commonModules>
   <commonModules>CommonModule.ОтправкаSMS</commonModules>
   <commonModules>CommonModule.ОтправкаSMSКлиент</commonModules>
   <commonModules>CommonModule.ОтправкаSMSКлиентПереопределяемый</commonModules>
@@ -1244,6 +1246,7 @@
   <commonForms>CommonForm.СравнениеТабличныхДокументов</commonForms>
   <commonForms>CommonForm.УточнениеКонтактов</commonForms>
   <commonForms>CommonForm.ФайлыВТоме</commonForms>
+  <commonForms>CommonForm.ФонМониторингОповещений</commonForms>
   <commonForms>CommonForm.Форма</commonForms>
   <commonForms>CommonForm.ФормаВыбораЦвета</commonForms>
   <commonForms>CommonForm.ФормаВыбораШрифта</commonForms>
@@ -1422,6 +1425,7 @@
   <dataProcessors>DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</dataProcessors>
   <dataProcessors>DataProcessor.Сканирование</dataProcessors>
   <dataProcessors>DataProcessor.ТекущиеДела</dataProcessors>
+  <dataProcessors>DataProcessor.Тест</dataProcessors>
   <dataProcessors>DataProcessor.УдалениеПомеченныхОбъектов</dataProcessors>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанных</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</informationRegisters>
@@ -1476,6 +1480,7 @@
   <informationRegisters>InformationRegister.ОбработчикиОбновленияОбщихДанных</informationRegisters>
   <informationRegisters>InformationRegister.ОбращенияТГ</informationRegisters>
   <informationRegisters>InformationRegister.ОбщиеПоставляемыеМакетыПечати</informationRegisters>
+  <informationRegisters>InformationRegister.ОповещенияПользователей</informationRegisters>
   <informationRegisters>InformationRegister.ОсновныеПечатныеФормыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ОсновныеПечатныеФормыОбъектов</informationRegisters>
   <informationRegisters>InformationRegister.ОтветыНаВопросыАнкет</informationRegisters>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f85ddbc2-cc6d-4557-b0e6-8c3e0bf7cc14">
+  <producedTypes>
+    <selectionType typeId="2c2920c2-e4e9-4701-a6c0-e01627d903c1" valueTypeId="f3b52a95-39ac-4baa-8f6a-5489b36d7ca8"/>
+    <listType typeId="4f66bd02-341b-401f-9567-d776c94e8898" valueTypeId="b81f9c9e-2214-4a51-b57b-f2522ea5ec68"/>
+    <managerType typeId="a7377f0e-91e7-4df8-a8f9-1629f3ee5128" valueTypeId="b9e57c6d-9241-4ca4-9c3a-63751ca7441d"/>
+    <recordSetType typeId="db11a33d-a3f3-44cb-9938-6b65e2d70f62" valueTypeId="ea3b2c84-096a-444f-bbc3-f78b317995cf"/>
+    <recordKeyType typeId="f2941924-321d-4d56-ab0e-6038f44faea8" valueTypeId="27e73774-4047-4079-a514-f56cbe9fe709"/>
+    <recordType typeId="cae24913-07a1-4443-85c2-7df1b892d51c" valueTypeId="6e77867d-20b5-4c79-9eba-a8674cec0181"/>
+    <recordManagerType typeId="9c33fcc0-0621-45bb-ae06-9070610a5713" valueTypeId="b5536558-2d3c-4564-8a84-46560b134d4a"/>
+  </producedTypes>
+  <name>ОповещенияПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оповещения пользователей</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2430ec3f-3f16-446f-bec7-fd8305a4d36e">
+    <name>Прочитано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прочитано</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0953e772-c704-4a1f-935a-50956c7276ed">
+    <name>Заголовок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заголовок</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a992d3f2-3525-49f0-8fae-4bd857c96f68">
+    <name>ТекстОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст оповещения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="41822a3a-8294-4bd4-abf6-dd5c2831d565">
+    <name>НавигационнаяСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Навигационная ссылка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="bd11343e-7ea9-4097-b735-7295fe5d9f46">
+    <name>ИсточникОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник объект</value>
+    </synonym>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="599e0f5b-cc1f-48ea-a6d1-a0c563b27616">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="12d57065-ec2b-4824-9320-a2a415cc3ecc">
+    <name>ВремяСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время события</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8fd0e462-1ff7-411a-881c-1a8f855d0d2f">
+    <name>УникальныйКлюч</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уникальный ключ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
