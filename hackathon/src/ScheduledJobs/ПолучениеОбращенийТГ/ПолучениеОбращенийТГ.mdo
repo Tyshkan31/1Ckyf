@@ -5,7 +5,7 @@
     <key>ru</key>
     <value>Получение обращений ТГ</value>
   </synonym>
-  <methodName>CommonModule.ОбращенияТГ.ПолучитьСообщения</methodName>
+  <methodName>CommonModule.Интеграции.ПолучитьСообщенияТелеграм</methodName>
   <use>true</use>
   <predefined>true</predefined>
   <restartCountOnFailure>3</restartCountOnFailure>
