@@ -68,4 +68,11 @@
       <value>Отправка данных в 1С-Элемент</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="95f62e69-7fa4-4191-a1e1-679b9c6c4aef">
+    <name>ПоискОтветаВFAQ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск ответа в FAQ</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>
