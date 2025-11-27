@@ -1397,6 +1397,7 @@
   <reports>Report.ПроверкаЦелостностиТома</reports>
   <reports>Report.ПрогрессОтложенногоОбновления</reports>
   <reports>Report.ПросроченныеЗадачи</reports>
+  <reports>Report.РабочаяНагрузкаИсполнителей</reports>
   <reports>Report.СведенияОПользователях</reports>
   <reports>Report.СостояниеОбращений</reports>
   <reports>Report.ТрудозатратыОбращений</reports>

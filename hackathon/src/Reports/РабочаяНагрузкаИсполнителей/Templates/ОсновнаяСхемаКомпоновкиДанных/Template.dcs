@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОсновныеДанные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительНаименование</dataPath>
+			<field>ИсполнительНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнитель наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Линия</dataPath>
+			<field>Линия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Линия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВРаботе</dataPath>
+			<field>ВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначено</dataPath>
+			<field>Назначено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+    Пользователи.Ссылка КАК Исполнитель,
+    Пользователи.Наименование КАК ИсполнительНаименование,
+    Пользователи.ЛинияПоддержки КАК Линия,
+    СУММА(
+        ВЫБОР
+            КОГДА Обращения.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.Новое)
+                И Обращения.ДатаСоздания &gt;= &amp;ДатаНачала
+                И Обращения.ДатаСоздания &lt;= &amp;ДатаОкончания
+            ТОГДА 1
+            ИНАЧЕ 0
+        КОНЕЦ
+    ) КАК Назначено,
+    СУММА(
+        ВЫБОР
+            КОГДА Обращения.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.ВРаботе)
+                И Обращения.ДатаСоздания &gt;= &amp;ДатаНачала
+                И Обращения.ДатаСоздания &lt;= &amp;ДатаОкончания
+            ТОГДА 1
+            ИНАЧЕ 0
+        КОНЕЦ
+    ) КАК ВРаботе
+
+ИЗ
+    Справочник.Пользователи КАК Пользователи
+    ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Обращения КАК Обращения
+        ПО Обращения.Исполнитель = Пользователи.Ссылка
+
+СГРУППИРОВАТЬ ПО
+    Пользователи.Ссылка,
+    Пользователи.Наименование,
+    Пользователи.ЛинияПоддержки
+
+ИМЕЮЩИЕ
+    (
+        СУММА(
+            ВЫБОР
+                КОГДА Обращения.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.Новое)
+                    И Обращения.ДатаСоздания &gt;= &amp;ДатаНачала
+                    И Обращения.ДатаСоздания &lt;= &amp;ДатаОкончания
+                ТОГДА 1
+                ИНАЧЕ 0
+            КОНЕЦ
+        ) &gt; 0
+        ИЛИ
+        СУММА(
+            ВЫБОР
+                КОГДА Обращения.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.ВРаботе)
+                    И Обращения.ДатаСоздания &gt;= &amp;ДатаНачала
+                    И Обращения.ДатаСоздания &lt;= &amp;ДатаОкончания
+                ТОГДА 1
+                ИНАЧЕ 0
+            КОНЕЦ
+        ) &gt; 0
+    )
+
+УПОРЯДОЧИТЬ ПО
+    Пользователи.Наименование</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СреднееВремя</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СреднееВремяРешения</dataPath>
+			<field>СреднееВремяРешения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среднее время решения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+    РаботаПоОбращению.Исполнитель КАК Исполнитель,
+    СРЕДНЕЕ(РаботаПоОбращению.Часы) КАК СреднееВремяРешения
+ИЗ
+    Документ.РаботаПоОбращению КАК РаботаПоОбращению
+    ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Обращения КАК Обращения
+        ПО РаботаПоОбращению.Обращение = Обращения.Ссылка
+ГДЕ
+    РаботаПоОбращению.Проведен = ИСТИНА
+    И Обращения.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.Закрыто)
+СГРУППИРОВАТЬ ПО
+    РаботаПоОбращению.Исполнитель
+    
+    
+    
+    
+    </query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ОсновныеДанные</sourceDataSet>
+		<destinationDataSet>СреднееВремя</destinationDataSet>
+		<sourceExpression>Исполнитель</sourceExpression>
+		<destinationExpression>Исполнитель</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>СреднееВремяЧЧММ</dataPath>
+		<expression>СтрШаблон("%02d:%02d",
+    Цел(СреднееВремяРешения),
+    Окр((СреднееВремяРешения - Цел(СреднееВремяРешения))*60, 0)
+)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Среднее время ЧЧММ</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Назначено</dataPath>
+		<expression>Сумма(Назначено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВРаботе</dataPath>
+		<expression>Сумма(ВРаботе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СреднееВремяРешения</dataPath>
+		<expression>Среднее(СреднееВремяРешения)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительНаименование</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Линия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Назначено</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначено(на текущий момент)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВРаботе</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В работе(на текущий момент)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднееВремяРешения</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>03b6cc84-b0d3-4151-9f46-6b7d0b594c5b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОкончания</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>c4aba5ab-3a9f-4c0c-8457-74d8a1e8e754</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>1ff9c66f-fd38-41bd-983b-e780e6c48fd0</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
