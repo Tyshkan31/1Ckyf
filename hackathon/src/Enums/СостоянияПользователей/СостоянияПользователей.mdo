@@ -33,4 +33,18 @@
       <value>Ожидает новое обращение</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="2d5e326f-ef84-4297-a900-847ff28dbcf7">
+    <name>ОцениваетВыполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценивает выполнение</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="da09086a-bc54-4584-a900-3670c85ffc7d">
+    <name>Закрыто</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыто</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>
