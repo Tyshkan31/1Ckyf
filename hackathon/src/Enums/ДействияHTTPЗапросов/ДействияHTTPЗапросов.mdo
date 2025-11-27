@@ -61,4 +61,11 @@
       <value>Создание обращения на основании источника</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="bb53fa86-3f57-4e8b-9de6-0961290e987c">
+    <name>ОтправкаДанныхВЭлемент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправка данных в 1С-Элемент</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>
