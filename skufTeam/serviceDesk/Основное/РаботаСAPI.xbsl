@@ -1,18 +1,19 @@
-конст АдресСервиса = "https://tsyas-app-989601.1cmycloud.com/applications/chiriker-dev"
+конст АдресСервиса = "https://wriest-rita-homological.ngrok-free.dev/Application"
 
 @НаСервере @ДоступноСКлиента
 @ВПроекте
 метод ОтправитьВ1С(ТелоJSON: Строка)
     
-    пер URL = "%АдресСервиса%/hs/ИмяСервиса/Метод"
+    пер URL = "%АдресСервиса/hs/putRequest/put_element_edt"
 
-    пер Логин1С = "UserName"
-    пер Пароль1С = "UserPassword"
+    пер Логин1С = "пися"
+    пер Пароль1С = "123"
 
-    знч Клиент = КлиентHttp.ЗапросPost(URL)
+    знч Клиент = КлиентHttp.ЗапросPut(URL)
 
-    Клиент.Заголовки.Установить("Content-Type", "application/json; charset=utf-8")
+    Клиент.Заголовки.Установить("Content-Type", "application/json")
     Клиент.Заголовки.Установить("Accept", "application/json")
+    Клиент.Заголовки.Установить("ngrok-skip-browser-warning", "true")
 
     Клиент.УстановитьАутентификацию(
         новый АутентификацияHttp(
