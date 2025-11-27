@@ -11,5 +11,6 @@
   <content>Catalog.ИсточникиОбращений</content>
   <content>Catalog.ПочтовыеСообщения</content>
   <content>DataProcessor.ОбработкаЗапроса</content>
+  <content>InformationRegister.СтатусыHTTPЗапросов</content>
   <parentSubsystem>Subsystem.РегистрацияИОбработкаОбращений</parentSubsystem>
 </mdclass:Subsystem>

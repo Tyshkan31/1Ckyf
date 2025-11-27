@@ -1323,6 +1323,7 @@
   <enums>Enum.ВидыПереключателяВАнкетах</enums>
   <enums>Enum.ВидыСвойств</enums>
   <enums>Enum.ВидыФлажкаВАнкетах</enums>
+  <enums>Enum.ДействияHTTPЗапросов</enums>
   <enums>Enum.ДействияСФайламиПоДвойномуЩелчку</enums>
   <enums>Enum.ДополнительныеЗначенияДоступа</enums>
   <enums>Enum.ИсточникиОбращений</enums>
@@ -1511,6 +1512,7 @@
   <informationRegisters>InformationRegister.СостоянияКонтактовВзаимодействий</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПапокПисем</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПредметовВзаимодействий</informationRegisters>
+  <informationRegisters>InformationRegister.СтатусыHTTPЗапросов</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыСинхронизацииФайловСОблачнымСервисом</informationRegisters>
   <informationRegisters>InformationRegister.ТаблицыГруппДоступа</informationRegisters>
   <informationRegisters>InformationRegister.УведомленияОПрочтении</informationRegisters>

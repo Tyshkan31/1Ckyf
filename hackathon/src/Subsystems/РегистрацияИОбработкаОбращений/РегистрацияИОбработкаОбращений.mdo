@@ -17,5 +17,6 @@
   <content>Document.НазначениеОпросов</content>
   <content>Catalog.Сотрудники</content>
   <content>Catalog.ШаблоныСообщений</content>
+  <content>InformationRegister.СтатусыHTTPЗапросов</content>
   <subsystems>Сервис</subsystems>
 </mdclass:Subsystem>

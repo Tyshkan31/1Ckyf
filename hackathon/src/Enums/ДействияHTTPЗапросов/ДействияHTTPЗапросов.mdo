@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3dcab20-eb6f-410f-82b3-ad1cac84c65a">
+  <producedTypes>
+    <refType typeId="250319e1-0e72-4ea0-9f86-2f213a74031c" valueTypeId="3bed4fb2-3ade-45ab-b2d0-42fc67f8aa4f"/>
+    <listType typeId="2836c36b-0e60-4e84-835e-6dfba49ed53c" valueTypeId="71bf775c-54dc-4903-bef6-5fb4db72650c"/>
+    <managerType typeId="ee5ef477-eb9a-4996-8b9e-c480c5043382" valueTypeId="1ef0114a-5f3b-4304-9b95-5b324de214ec"/>
+  </producedTypes>
+  <name>ДействияHTTPЗапросов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Действия HTTPЗапросов</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="761dc52c-1dae-466d-b1b1-830c4f7525d1">
+    <name>ОбновлениеОбращенийДаннымиИзЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обновление обращения данными из 1С-Элемента</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8d875232-ef41-431a-a3e4-34ed4b5c5c1a">
+    <name>СозданиеИсточникаДаннымиИзЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создание источника данными из 1С-Элемента</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="efe34bb7-e7e6-41c4-95a3-c1dc99c095bf">
+    <name>ПолучениеДанныхИзЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получение данных из 1С-Элемента</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d0423134-b440-41b9-9d40-6b0d7058265a">
+    <name>ОтправкаТекстаИИ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправка текста в ИИ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d975592e-c591-4f1f-b191-0e5e7da8c52e">
+    <name>ПолучениеДанныхИзТГ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получение данных из ТГ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e2461406-a887-4364-a7d0-8834ef8a4a6d">
+    <name>ОбновлениеОбращенийДаннымиИзТГ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обновление обращения данными из ТГ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="bc7a9d75-8c6a-4a51-8742-075734e74a1a">
+    <name>СозданиеОбращенияНаОснованииИсточника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создание обращения на основании источника</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
