@@ -965,6 +965,7 @@
   <scheduledJobs>ScheduledJob.ОбновлениеИндексаППД</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбновлениеКонтактнойИнформацииCRM</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбновлениеСтатусовДоставкиSMS</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ОбработкаНовыхОбращений</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОбработкаСервисовИнтеграции</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОтложенноеОбновлениеИБ</scheduledJobs>
   <scheduledJobs>ScheduledJob.ОтправкаSMS</scheduledJobs>
@@ -1340,6 +1341,7 @@
   <enums>Enum.РежимыОчисткиФайлов</enums>
   <enums>Enum.СостоянияБизнесПроцессов</enums>
   <enums>Enum.СостоянияДокументаСообщениеSMS</enums>
+  <enums>Enum.СостоянияПользователей</enums>
   <enums>Enum.СостоянияПроцессовДляЗапуска</enums>
   <enums>Enum.СостоянияСообщенияSMS</enums>
   <enums>Enum.СпособыЗаполненияГрафикаРаботы</enums>
@@ -1505,6 +1507,7 @@
   <informationRegisters>InformationRegister.СвойстваРасширений</informationRegisters>
   <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеОбращений</informationRegisters>
+  <informationRegisters>InformationRegister.СостояниеТГПользователя</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияКонтактовВзаимодействий</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПапокПисем</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияПредметовВзаимодействий</informationRegisters>

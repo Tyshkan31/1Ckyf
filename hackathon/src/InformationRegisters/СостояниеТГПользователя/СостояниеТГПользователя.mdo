@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b29d6e83-f5de-476a-9be8-e1e5d849d3d6">
+  <producedTypes>
+    <selectionType typeId="650ac0ea-c14d-40cc-b682-3734caa4ba87" valueTypeId="bd52ac18-e274-40d9-be83-981c9f7807d5"/>
+    <listType typeId="53296d58-1b23-4925-aaf0-5a60dd239217" valueTypeId="3c2da3aa-b10b-4871-8e36-8eb1a5fbbc34"/>
+    <managerType typeId="8eb0d72a-7184-4533-b73c-8e99846bd363" valueTypeId="a75f8330-602e-4e82-abbd-564eb7f6a582"/>
+    <recordSetType typeId="3a8fe699-a635-4997-864a-2ca11fe566d7" valueTypeId="94ecb4e5-0cba-4d26-8f5b-13faf2184e50"/>
+    <recordKeyType typeId="409e5bfb-fca0-4051-8a34-70014be618e5" valueTypeId="379c4c84-1aa2-40c4-a476-3e3da4cc48c9"/>
+    <recordType typeId="bb3303d6-4a78-4a47-a4f8-1af88a403732" valueTypeId="c6e3d07c-5ca2-4ff6-9d4a-8a9950b5919e"/>
+    <recordManagerType typeId="6315b46d-26f2-46bb-9212-3d3bc3e1fe29" valueTypeId="ae3da537-9583-49b3-bb41-21948304d34a"/>
+  </producedTypes>
+  <name>СостояниеТГПользователя</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние ТГПользователя</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5c4271c4-bee4-4a89-ab5e-a253ac150ba4">
+    <name>ТекущееСостояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текущее состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="48a235fb-317e-4134-a220-f828698b7f72">
+    <name>idUser</name>
+    <synonym>
+      <key>ru</key>
+      <value>Id user</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

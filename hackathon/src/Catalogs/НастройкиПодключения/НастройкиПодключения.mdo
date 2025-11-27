@@ -105,6 +105,20 @@
   <autonumbering>true</autonumbering>
   <defaultPresentation>AsDescription</defaultPresentation>
   <predefined>
+    <items id="bc62a136-6fce-48d1-8f10-15b750489387">
+      <name>AmoCRM</name>
+      <description>Amo CRM</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
+    <items id="550338e4-b315-4e85-8837-6b1ed8ec2120">
+      <name>Telegram</name>
+      <description>Telegram</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
     <items id="7147077d-9c38-4b5f-a9e2-b766c01277b1">
       <name>ПодключениеGemini</name>
       <description>ПодключениеGemini</description>
@@ -117,13 +131,6 @@
       <description>Прокси</description>
       <code xsi:type="core:StringValue">
         <value>000000002</value>
-      </code>
-    </items>
-    <items id="bc62a136-6fce-48d1-8f10-15b750489387">
-      <name>AmoCRM</name>
-      <description>Amo CRM</description>
-      <code xsi:type="core:StringValue">
-        <value>000000003</value>
       </code>
     </items>
   </predefined>
