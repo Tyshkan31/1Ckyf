@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="12e3bf3e-eb17-4f33-8a79-fd5e583b767a">
+  <name>ПолучитьОбращенияПочта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получить обращения почта</value>
+  </synonym>
+  <methodName>CommonModule.СРОО_ФоновыеЗадания.ПолучитьПисьмаНаСервере</methodName>
+  <use>true</use>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

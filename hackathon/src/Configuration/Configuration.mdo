@@ -976,6 +976,7 @@
   <scheduledJobs>ScheduledJob.ПолучениеИОтправкаЭлектронныхПисем</scheduledJobs>
   <scheduledJobs>ScheduledJob.ПолучениеОбращенийТГ</scheduledJobs>
   <scheduledJobs>ScheduledJob.ПолучениеСтатусовЭлектронныхПисем</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ПолучитьОбращенияПочта</scheduledJobs>
   <scheduledJobs>ScheduledJob.СинхронизацияФайлов</scheduledJobs>
   <scheduledJobs>ScheduledJob.СлияниеИндексаППД</scheduledJobs>
   <scheduledJobs>ScheduledJob.СтартОтложенныхПроцессов</scheduledJobs>
