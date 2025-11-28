@@ -10,7 +10,17 @@
     <value>Мониторинг SLA</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.МониторингSLA.Form.ФормаОтчета</defaultForm>
   <mainDataCompositionSchema>Report.МониторингSLA.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="bd391ccd-6d20-4e42-93fb-0cf1a9537dd8">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="e6741b31-1c5e-4adc-b1c0-c3fb881e7003">
     <name>ОсновнаяСхемаКомпоновкиДанных</name>
     <synonym>

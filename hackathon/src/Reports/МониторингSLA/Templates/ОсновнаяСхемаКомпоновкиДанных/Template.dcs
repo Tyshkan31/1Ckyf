@@ -5,7 +5,11 @@
 		<dataSourceType>Local</dataSourceType>
 	</dataSource>
 	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных1</name>
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Обращение</dataPath>
 			<field>Обращение</field>
@@ -14,88 +18,368 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Реакция</dataPath>
-			<field>Реакция</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Решение</dataPath>
-			<field>Решение</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ПовторнаяРеакция</dataPath>
-			<field>ПовторнаяРеакция</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>РеакцияМетрика</dataPath>
-			<field>РеакцияМетрика</field>
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Реакция метрика</v8:content>
+					<v8:content>Номер</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>РешениеМетрика</dataPath>
-			<field>РешениеМетрика</field>
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Решение метрика</v8:content>
+					<v8:content>Дата создания</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ПовторнаяРеакцияМетрика</dataPath>
-			<field>ПовторнаяРеакцияМетрика</field>
+			<dataPath>Тема</dataPath>
+			<field>Тема</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Повторная реакция метрика</v8:content>
+					<v8:content>Тема</v8:content>
 				</v8:item>
 			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Сотрудник</dataPath>
-			<field>Сотрудник</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Статус</dataPath>
 			<field>Статус</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Поле1</dataPath>
-			<field>Поле1</field>
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Поле1</v8:content>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДедлайнРеакции</dataPath>
+			<field>ДедлайнРеакции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дедлайн реакции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДедлайнРешения</dataPath>
+			<field>ДедлайнРешения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дедлайн решения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьМинутРеакция</dataPath>
+			<field>ОсталосьМинутРеакция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось минут реакция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьМинутРешение</dataPath>
+			<field>ОсталосьМинутРешение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось минут решение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусРеакция</dataPath>
+			<field>СтатусРеакция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус реакция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусРешение</dataPath>
+			<field>СтатусРешение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус решение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРеакция</dataPath>
+			<field>ПланРеакция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План реакция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактРеакция</dataPath>
+			<field>ФактРеакция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт реакция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактРешение</dataPath>
+			<field>ФактРешение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт решение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентРеакция</dataPath>
+			<field>ПроцентРеакция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент реакция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРешение</dataPath>
+			<field>ПланРешение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План решение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентРешение</dataPath>
+			<field>ПроцентРешение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент решение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тип</dataPath>
+			<field>Тип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	СостояниеОбращенийСрезПоследних.Обращение КАК Обращение,
-	ПоказателиSLAПоОбращениям.Реакция КАК Реакция,
-	ПоказателиSLAПоОбращениям.Решение КАК Решение,
-	ПоказателиSLAПоОбращениям.ПовторнаяРеакция КАК ПовторнаяРеакция,
-	МетрикиSLA.Реакция КАК РеакцияМетрика,
-	МетрикиSLA.Решение КАК РешениеМетрика,
-	МетрикиSLA.ПовторнаяРеакция КАК ПовторнаяРеакцияМетрика,
-	СостояниеОбращенийСрезПоследних.Сотрудник КАК Сотрудник,
-	1 КАК Поле1
+    // ========== ОСНОВНАЯ ИНФОРМАЦИЯ ==========
+    СостояниеОбращенийСрезПоследних.Обращение КАК Обращение,
+    СостояниеОбращенийСрезПоследних.Обращение.Код КАК Номер,
+    СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания КАК ДатаСоздания,
+    СостояниеОбращенийСрезПоследних.Обращение.ТекстОбращения КАК Тема,
+    
+    // ========== ТЕКУЩЕЕ СОСТОЯНИЕ ==========
+    СостояниеОбращенийСрезПоследних.Обращение.Тип КАК Тип,
+    СостояниеОбращенийСрезПоследних.Обращение.Приоритет КАК Приоритет,
+    СостояниеОбращенийСрезПоследних.СтатусРесурс КАК Статус,
+    СостояниеОбращенийСрезПоследних.Обращение.Исполнитель КАК Сотрудник,
+    
+    // ========== SLA РЕАКЦИЯ - ПЛАНОВЫЕ И ФАКТИЧЕСКИЕ ==========
+    МетрикиSLA.Реакция КАК ПланРеакция,
+    ПоказателиSLAПоОбращениям.Реакция КАК ФактРеакция,
+    
+    ВЫБОР
+        // Проверяем, что SLA вообще настроен
+        КОГДА МетрикиSLA.Реакция ЕСТЬ NULL ИЛИ МетрикиSLA.Реакция = 0 ТОГДА
+            "SLA не настроен"
+        
+        // Реакции ЕЩЕ НЕТ - считаем текущее состояние
+        КОГДА ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL 
+            ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0 ТОГДА
+            ВЫБОР
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt;= МетрикиSLA.Реакция
+                    ТОГДА "Просрочен"
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Реакция * 0.8
+                    ТОГДА "Критично"
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Реакция * 0.5
+                    ТОГДА "Внимание"
+                ИНАЧЕ "Норма"
+            КОНЕЦ
+        
+        // Реакция БЫЛА - проверяем, вовремя ли
+        КОГДА ПоказателиSLAПоОбращениям.Реакция &gt; МетрикиSLA.Реакция
+            ТОГДА "Нарушен"
+        КОГДА ПоказателиSLAПоОбращениям.Реакция &lt;= МетрикиSLA.Реакция
+            ТОГДА "Выполнен"
+        
+        ИНАЧЕ "Не определен"
+    КОНЕЦ КАК СтатусРеакция,
+    
+    ВЫБОР
+        КОГДА (ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0)
+            И МетрикиSLA.Реакция &gt; 0
+            И РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &lt; МетрикиSLA.Реакция ТОГДА
+            РАЗНОСТЬДАТ(&amp;ТекущаяДата, ДОБАВИТЬКДАТЕ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, МИНУТА, МетрикиSLA.Реакция), МИНУТА)
+        ИНАЧЕ NULL
+    КОНЕЦ КАК ОсталосьМинутРеакция,
+    
+    ДОБАВИТЬКДАТЕ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, МИНУТА, МетрикиSLA.Реакция) КАК ДедлайнРеакции,
+    
+    ВЫБОР
+        КОГДА (ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0)
+            И МетрикиSLA.Реакция &gt; 0 ТОГДА
+            ВЫБОР
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) / МетрикиSLA.Реакция * 100 &gt; 100
+                    ТОГДА 100
+                ИНАЧЕ РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) / МетрикиSLA.Реакция * 100
+            КОНЕЦ
+        КОГДА ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0 ТОГДА
+            0
+        КОГДА МетрикиSLA.Реакция &gt; 0 ТОГДА
+            ВЫБОР
+                КОГДА ПоказателиSLAПоОбращениям.Реакция / МетрикиSLA.Реакция * 100 &gt; 100
+                    ТОГДА 100
+                ИНАЧЕ ПоказателиSLAПоОбращениям.Реакция / МетрикиSLA.Реакция * 100
+            КОНЕЦ
+        ИНАЧЕ 0
+    КОНЕЦ КАК ПроцентРеакция,
+    
+    // ========== SLA РЕШЕНИЕ - ПЛАНОВЫЕ И ФАКТИЧЕСКИЕ ==========
+    МетрикиSLA.Решение КАК ПланРешение,
+    ПоказателиSLAПоОбращениям.Решение КАК ФактРешение,
+    
+    ВЫБОР
+        // Проверяем, что SLA вообще настроен
+        КОГДА МетрикиSLA.Решение ЕСТЬ NULL ИЛИ МетрикиSLA.Решение = 0 ТОГДА
+            "SLA не настроен"
+        
+        // Решения ЕЩЕ НЕТ - считаем текущее состояние
+        КОГДА ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL 
+            ИЛИ ПоказателиSLAПоОбращениям.Решение = 0 ТОГДА
+            ВЫБОР
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt;= МетрикиSLA.Решение
+                    ТОГДА "Просрочен"
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Решение * 0.8
+                    ТОГДА "Критично"
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Решение * 0.5
+                    ТОГДА "Внимание"
+                ИНАЧЕ "Норма"
+            КОНЕЦ
+        
+        // Решение БЫЛО - проверяем, вовремя ли
+        КОГДА ПоказателиSLAПоОбращениям.Решение &gt; МетрикиSLA.Решение
+            ТОГДА "Нарушен"
+        КОГДА ПоказателиSLAПоОбращениям.Решение &lt;= МетрикиSLA.Решение
+            ТОГДА "Выполнен"
+        
+        ИНАЧЕ "Не определен"
+    КОНЕЦ КАК СтатусРешение,
+    
+    ВЫБОР
+        КОГДА (ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Решение = 0)
+            И МетрикиSLA.Решение &gt; 0
+            И РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &lt; МетрикиSLA.Решение ТОГДА
+            РАЗНОСТЬДАТ(&amp;ТекущаяДата, ДОБАВИТЬКДАТЕ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, МИНУТА, МетрикиSLA.Решение), МИНУТА)
+        ИНАЧЕ NULL
+    КОНЕЦ КАК ОсталосьМинутРешение,
+    
+    ДОБАВИТЬКДАТЕ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, МИНУТА, МетрикиSLA.Решение) КАК ДедлайнРешения,
+    
+    ВЫБОР
+        КОГДА (ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Решение = 0)
+            И МетрикиSLA.Решение &gt; 0 ТОГДА
+            ВЫБОР
+                КОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) / МетрикиSLA.Решение * 100 &gt; 100
+                    ТОГДА 100
+                ИНАЧЕ РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) / МетрикиSLA.Решение * 100
+            КОНЕЦ
+        КОГДА ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Решение = 0 ТОГДА
+            0
+        КОГДА МетрикиSLA.Решение &gt; 0 ТОГДА
+            ВЫБОР
+                КОГДА ПоказателиSLAПоОбращениям.Решение / МетрикиSLA.Решение * 100 &gt; 100
+                    ТОГДА 100
+                ИНАЧЕ ПоказателиSLAПоОбращениям.Решение / МетрикиSLA.Решение * 100
+            КОНЕЦ
+        ИНАЧЕ 0
+    КОНЕЦ КАК ПроцентРешение
+
 ИЗ
-	РегистрСведений.СостояниеОбращений.СрезПоследних КАК СостояниеОбращенийСрезПоследних
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПоказателиSLAПоОбращениям КАК ПоказателиSLAПоОбращениям
-		ПО СостояниеОбращенийСрезПоследних.Обращение = ПоказателиSLAПоОбращениям.Обращение
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.МетрикиSLA КАК МетрикиSLA
-		ПО СостояниеОбращенийСрезПоследних.Обращение.Тип = МетрикиSLA.ТипОбращения
-		И СостояниеОбращенийСрезПоследних.Обращение.Приоритет = МетрикиSLA.ПриоритетОбращения
+    РегистрСведений.СостояниеОбращений.СрезПоследних(&amp;МоментВремени) КАК СостояниеОбращенийСрезПоследних
+        ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПоказателиSLAПоОбращениям КАК ПоказателиSLAПоОбращениям
+        ПО СостояниеОбращенийСрезПоследних.Обращение = ПоказателиSLAПоОбращениям.Обращение
+        ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.МетрикиSLA КАК МетрикиSLA
+        ПО СостояниеОбращенийСрезПоследних.Обращение.Тип = МетрикиSLA.ТипОбращения
+        И СостояниеОбращенийСрезПоследних.Обращение.Приоритет = МетрикиSLA.ПриоритетОбращения
+
 ГДЕ
-	СостояниеОбращенийСрезПоследних.СтатусРесурс = &amp;СтатусРесурс</query>
+    СостояниеОбращенийСрезПоследних.СтатусРесурс В (
+        ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.Новое),
+        ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.ВРаботе),
+        ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.ОжидаетКлиента),
+        ЗНАЧЕНИЕ(Перечисление.СтатусыОбращения.ВозвращеноКлиентом)
+    )
+    
+    И НЕ СостояниеОбращенийСрезПоследних.Обращение.Исполнитель ЕСТЬ NULL
+    
+    И (&amp;Сотрудник = НЕОПРЕДЕЛЕНО
+        ИЛИ СостояниеОбращенийСрезПоследних.Обращение.Исполнитель = &amp;Сотрудник)
+    
+    И (&amp;Приоритет = НЕОПРЕДЕЛЕНО
+        ИЛИ СостояниеОбращенийСрезПоследних.Обращение.Приоритет = &amp;Приоритет)
+    
+    И (&amp;Тип = НЕОПРЕДЕЛЕНО
+        ИЛИ СостояниеОбращенийСрезПоследних.Обращение.Тип = &amp;Тип)
+    
+    И (&amp;РежимПоказа = "Все"
+        ИЛИ (&amp;РежимПоказа = "Критичные" 
+            И (ВЫБОР
+                    КОГДА (ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0)
+                        И МетрикиSLA.Реакция &gt; 0
+                        ТОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Реакция * 0.8
+                    ИНАЧЕ ЛОЖЬ
+                КОНЕЦ
+                ИЛИ ВЫБОР
+                    КОГДА (ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Решение = 0)
+                        И МетрикиSLA.Решение &gt; 0
+                        ТОГДА РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt; МетрикиSLA.Решение * 0.8
+                    ИНАЧЕ ЛОЖЬ
+                КОНЕЦ))
+        ИЛИ (&amp;РежимПоказа = "Нарушенные"
+            И (ПоказателиSLAПоОбращениям.Реакция &gt; МетрикиSLA.Реакция
+                ИЛИ ПоказателиSLAПоОбращениям.Решение &gt; МетрикиSLA.Решение
+                ИЛИ ((ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0)
+                    И МетрикиSLA.Реакция &gt; 0
+                    И РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt;= МетрикиSLA.Реакция)
+                ИЛИ ((ПоказателиSLAПоОбращениям.Решение ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Решение = 0)
+                    И МетрикиSLA.Решение &gt; 0
+                    И РАЗНОСТЬДАТ(СостояниеОбращенийСрезПоследних.Обращение.ДатаСоздания, &amp;ТекущаяДата, МИНУТА) &gt;= МетрикиSLA.Решение)))
+        ИЛИ (&amp;РежимПоказа = "БезРеакции"
+            И (ПоказателиSLAПоОбращениям.Реакция ЕСТЬ NULL ИЛИ ПоказателиSLAПоОбращениям.Реакция = 0)))
+
+УПОРЯДОЧИТЬ ПО
+    ОсталосьМинутРеакция</query>
 	</dataSet>
 	<parameter>
 		<name>Период</name>
@@ -112,202 +396,330 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
-		<name>СтатусРесурс</name>
+		<name>МоментВремени</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Статус ресурс</v8:content>
+				<v8:content>Момент времени</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыОбращения</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<parameter>
+		<name>Приоритет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приоритет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ПриоритетыОбращения</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РежимПоказа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Режим показа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Все</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:string">Все</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Критичные</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Нарушенные</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">БезРеакции</value>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>Сотрудник</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сотрудник</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Тип</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ТипыОбращений</v8:Type>
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Обращение</dcsset:field>
+					<dcsset:field>Номер</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПовторнаяРеакция</dcsset:field>
+					<dcsset:field>Тип</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПовторнаяРеакцияМетрика</dcsset:field>
+					<dcsset:field>Приоритет</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Поле1</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Реакция</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>РеакцияМетрика</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Решение</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>РешениеМетрика</dcsset:field>
+					<dcsset:field>Статус</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Сотрудник</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактРеакция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьМинутРеакция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусРеакция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентРеакция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактРешение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьМинутРешение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусРешение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентРешение</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:item xsi:type="dcsset:StructureItemTable">
-				<dcsset:column>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Реакция</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РежимПоказа</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-					<dcsset:item>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>РеакцияМетрика</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
 						<dcsset:item>
-							<dcsset:groupItems>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>Решение</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-							</dcsset:groupItems>
-							<dcsset:order>
-								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-							</dcsset:order>
-							<dcsset:selection>
-								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							</dcsset:selection>
-							<dcsset:item>
-								<dcsset:groupItems>
-									<dcsset:item xsi:type="dcsset:GroupItemField">
-										<dcsset:field>РешениеМетрика</dcsset:field>
-										<dcsset:groupType>Items</dcsset:groupType>
-										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-									</dcsset:item>
-								</dcsset:groupItems>
-								<dcsset:order>
-									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-								</dcsset:order>
-								<dcsset:selection>
-									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-								</dcsset:selection>
-								<dcsset:item>
-									<dcsset:groupItems>
-										<dcsset:item xsi:type="dcsset:GroupItemField">
-											<dcsset:field>ПовторнаяРеакцияМетрика</dcsset:field>
-											<dcsset:groupType>Items</dcsset:groupType>
-											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-										</dcsset:item>
-									</dcsset:groupItems>
-									<dcsset:order>
-										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-									</dcsset:order>
-									<dcsset:selection>
-										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-									</dcsset:selection>
-									<dcsset:item>
-										<dcsset:groupItems>
-											<dcsset:item xsi:type="dcsset:GroupItemField">
-												<dcsset:field>ПовторнаяРеакция</dcsset:field>
-												<dcsset:groupType>Items</dcsset:groupType>
-												<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-												<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-												<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-											</dcsset:item>
-										</dcsset:groupItems>
-										<dcsset:order>
-											<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-										</dcsset:order>
-										<dcsset:selection>
-											<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-										</dcsset:selection>
-									</dcsset:item>
-								</dcsset:item>
-							</dcsset:item>
+							<dcsset:field>СтатусРеакция</dcsset:field>
 						</dcsset:item>
-					</dcsset:item>
-				</dcsset:column>
-				<dcsset:row>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Обращение</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусРеакция</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Просрочен</dcsset:right>
 						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-					<dcsset:item>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Сотрудник</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
 						<dcsset:item>
-							<dcsset:order>
-								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-							</dcsset:order>
-							<dcsset:selection>
-								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							</dcsset:selection>
+							<dcsset:field>СтатусРеакция</dcsset:field>
 						</dcsset:item>
-					</dcsset:item>
-				</dcsset:row>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусРеакция</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Выполнен</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветРазделаПанелиФункций</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусРеакция</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусРеакция</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Норма</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусРеакция</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусРеакция</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">SLA не настроен</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9E9E9E</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Номер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Тип</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Приоритет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Статус</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сотрудник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтатусРеакция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОсталосьМинутРеакция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентРеакция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактРеакция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтатусРешение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОсталосьМинутРешение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентРешение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактРешение</dcsset:field>
+					</dcsset:item>
 				</dcsset:selection>
 			</dcsset:item>
 		</dcsset:settings>

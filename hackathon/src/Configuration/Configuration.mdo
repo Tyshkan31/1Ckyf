@@ -587,6 +587,17 @@
   <roles>Role.ПолныеПрава</roles>
   <roles>Role.ПросмотрЖурналаРегистрации</roles>
   <roles>Role.ПросмотрОписанияИзмененийПрограммы</roles>
+  <roles>Role.ПросмотрОтчетаАналализОпросов</roles>
+  <roles>Role.ПросмотрОтчетаАналитическихОтчетов</roles>
+  <roles>Role.ПросмотрОтчетаВыполнениеМетрик</roles>
+  <roles>Role.ПросмотрОтчетаЗависшиеЗадачи</roles>
+  <roles>Role.ПросмотрОтчетаИстекающихНаДату</roles>
+  <roles>Role.ПросмотрОтчетаМониторингаSLA</roles>
+  <roles>Role.ПросмотрОтчетаПросроченныхЗаданий</roles>
+  <roles>Role.ПросмотрОтчетаРабочейНагрузкыИсполнителей</roles>
+  <roles>Role.ПросмотрОтчетаСостоянийОбращения</roles>
+  <roles>Role.ПросмотрОтчетаТрудозатратыОбращений</roles>
+  <roles>Role.РаботаСОбращениями</roles>
   <roles>Role.РедактированиеПечатныхФорм</roles>
   <roles>Role.РедактированиеРеквизитовОбъектов</roles>
   <roles>Role.РежимТехническогоСпециалиста</roles>
@@ -595,11 +606,19 @@
   <roles>Role.ЧтениеВерсийОбъектов</roles>
   <roles>Role.ЧтениеВнешнихПользователей</roles>
   <roles>Role.ЧтениеГрафиковРаботы</roles>
+  <roles>Role.ЧтениеДобавлениеЗапроса</roles>
   <roles>Role.ЧтениеДополнительныхСведений</roles>
   <roles>Role.ЧтениеЗаданий</roles>
   <roles>Role.ЧтениеЗадач</roles>
   <roles>Role.ЧтениеИнформацииОВерсияхОбъектов</roles>
+  <roles>Role.ЧтениеМетрикSLA</roles>
+  <roles>Role.ЧтениеНавыковСотрудников</roles>
+  <roles>Role.ЧтениеОбращенийСправочник</roles>
+  <roles>Role.ЧтениеОповещенийПользователей</roles>
+  <roles>Role.ЧтениеОповещенияПользователей</roles>
   <roles>Role.ЧтениеОтветовНаВопросыАнкет</roles>
+  <roles>Role.ЧтениеПодсистем</roles>
+  <roles>Role.ЧтениеРаботаСОбращениями</roles>
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
   <roles>Role.ЧтениеШаблоновСообщений</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
