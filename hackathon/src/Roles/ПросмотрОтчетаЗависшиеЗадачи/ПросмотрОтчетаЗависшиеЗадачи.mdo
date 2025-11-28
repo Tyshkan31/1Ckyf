@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55ebb9c6-4a8f-4752-86ca-c8b7ac721096">
+  <name>ПросмотрОтчетаЗависшиеЗадачи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Просмотр отчета зависшие задачи</value>
+  </synonym>
+</mdclass:Role>
