@@ -601,6 +601,7 @@
   <roles>Role.РедактированиеПечатныхФорм</roles>
   <roles>Role.РедактированиеРеквизитовОбъектов</roles>
   <roles>Role.РежимТехническогоСпециалиста</roles>
+  <roles>Role.Руководитель</roles>
   <roles>Role.СохранениеДанныхПользователя</roles>
   <roles>Role.УдаленныйДоступБазоваяФункциональность</roles>
   <roles>Role.ЧтениеВерсийОбъектов</roles>
@@ -1353,6 +1354,7 @@
   <enums>Enum.ПериодОчисткиФайлов</enums>
   <enums>Enum.ПорядокОбработчиковОбновления</enums>
   <enums>Enum.ПорядокОтветовНаЗапросыУведомленийОПрочтении</enums>
+  <enums>Enum.ПревышениеSLAСогласование</enums>
   <enums>Enum.ПриоритетыОбращения</enums>
   <enums>Enum.ПровайдерыSMS</enums>
   <enums>Enum.РазмерыБумаги</enums>

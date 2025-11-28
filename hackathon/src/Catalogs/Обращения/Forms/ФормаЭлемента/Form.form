@@ -665,6 +665,140 @@
             <horizontalStretch>true</horizontalStretch>
           </extInfo>
         </items>
+        <items xsi:type="form:FormGroup">
+          <name>Группа12</name>
+          <id>249</id>
+          <items xsi:type="form:FormField">
+            <name>ПревышениеСогласовано</name>
+            <id>251</id>
+            <title>
+              <key>ru</key>
+              <value>Согласование</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ПревышениеСогласовано</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ПревышениеСогласованоПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ПревышениеСогласованоРасширеннаяПодсказка</name>
+              <id>253</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ПревышениеСогласованоКонтекстноеМеню</name>
+              <id>252</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <selectedItemsActionsPanel>
+              <name>ПревышениеСогласованоПанельДействийВыделенныхСтрок</name>
+              <id>254</id>
+              <fillStdCommands>true</fillStdCommands>
+              <horizontalAlign>Left</horizontalAlign>
+              <appearanceMode>CommandBar</appearanceMode>
+            </selectedItemsActionsPanel>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>Руководитель</name>
+            <id>255</id>
+            <title>
+              <key>ru</key>
+              <value>Подпись</value>
+            </title>
+            <visible>true</visible>
+            <enabled>false</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Руководитель</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>РуководительРасширеннаяПодсказка</name>
+              <id>257</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>РуководительКонтекстноеМеню</name>
+              <id>256</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <selectedItemsActionsPanel>
+              <name>РуководительПанельДействийВыделенныхСтрок</name>
+              <id>258</id>
+              <fillStdCommands>true</fillStdCommands>
+              <horizontalAlign>Left</horizontalAlign>
+              <appearanceMode>CommandBar</appearanceMode>
+            </selectedItemsActionsPanel>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <textSize>Normal</textSize>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Превышение</value>
+          </title>
+          <extendedTooltip>
+            <name>Группа12РасширеннаяПодсказка</name>
+            <id>250</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>AlwaysHorizontal</group>
+            <behavior>Auto</behavior>
+            <representation>Auto</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>auto</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>

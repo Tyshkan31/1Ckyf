@@ -268,6 +268,36 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="ef2855a3-5cec-4fee-b39d-a57243ec8c7d">
+    <name>ПревышениеСогласовано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Превышение согласовано</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПревышениеSLAСогласование</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b4c3159e-56e8-4442-b249-6d9e710bc97f">
+    <name>Руководитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Руководитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="1845c422-4628-44f2-8cf1-f939e5f91070">
     <producedTypes>
       <objectType typeId="7d77cfe6-cc77-4974-8c5a-080b33a55df5" valueTypeId="5642ca20-6f1e-4f89-ada0-d34f5b5ef97f"/>

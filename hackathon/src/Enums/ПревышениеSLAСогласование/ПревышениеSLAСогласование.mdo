@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dda9925d-7a29-4a1c-8854-37451551a5ef">
+  <producedTypes>
+    <refType typeId="97a1fce7-9461-454a-944e-7c2d49382f7c" valueTypeId="96265e79-7d68-4b4b-a144-4c0fad18634c"/>
+    <listType typeId="5e1a664e-a00d-4456-8afe-3290d015f0c9" valueTypeId="de42706b-cb5c-4eb4-ad42-2d5a450cc94e"/>
+    <managerType typeId="5d71dc89-5b77-4b51-b187-17b4b096b337" valueTypeId="19b60a4d-554a-45ef-95ab-68a502950513"/>
+  </producedTypes>
+  <name>ПревышениеSLAСогласование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Превышение SLAСогласование</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="83ca891d-bfdd-47ae-995f-7bcac09d234c">
+    <name>Утверждено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Утверждено</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a559ae8e-8092-4ad6-84ad-3362a2d0dd6d">
+    <name>Отказано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отказано</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
