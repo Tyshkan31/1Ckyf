@@ -1895,6 +1895,10 @@
       <horizontalAlign>Left</horizontalAlign>
       <autoFill>true</autoFill>
     </autoCommandBar>
+    <handlers>
+      <event>BeforeAddRow</event>
+      <name>КомментарииПередНачаломДобавления</name>
+    </handlers>
     <searchStringAddition>
       <name>КомментарииСтрокаПоиска</name>
       <id>43</id>
