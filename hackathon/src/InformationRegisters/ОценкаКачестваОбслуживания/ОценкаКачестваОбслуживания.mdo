@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="44bb7243-90e0-4ee1-bbd0-6e26c7f1c4a4">
+  <producedTypes>
+    <selectionType typeId="2048d7e3-1648-4215-8f54-01a4f8ac6ec1" valueTypeId="41dc8748-a401-4699-84cc-b03069c0cd61"/>
+    <listType typeId="5c4fbda8-9f8e-420f-a737-f1382440c58b" valueTypeId="262bf722-d0a4-451f-8531-dee8f094899d"/>
+    <managerType typeId="ecc2ecea-4b91-4fb2-902f-fb0e497d923f" valueTypeId="cf232630-f4b8-4ed2-be43-70d79c6f3a21"/>
+    <recordSetType typeId="90af1aa7-18bc-4f32-b7ba-edb77aa91d1f" valueTypeId="2b02cfbc-5fcf-4749-a02b-dc6230d1c654"/>
+    <recordKeyType typeId="8ff26434-d9d0-4cca-baa2-b06000606399" valueTypeId="3566e280-5991-429a-a1c7-92d09eee3e01"/>
+    <recordType typeId="312cc8a8-7bc6-4ef4-b3f9-fe1c27212ea7" valueTypeId="d5187d4a-028c-4972-a388-c72b9c25c9f6"/>
+    <recordManagerType typeId="75347bf6-712a-4aec-9225-eb6ea3519c85" valueTypeId="19ce557e-4e94-495c-9114-8bf2e2785230"/>
+  </producedTypes>
+  <name>ОценкаКачестваОбслуживания</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оценка качества обслуживания</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="6f995d78-e247-43a0-88db-e24e328e439f">
+    <name>ОбращениеРешено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обращение решено</value>
+    </synonym>
+    <type>
+      <types>EnumRef.РешеноЛиОбращение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="368be7de-9871-4f95-b7bf-06304751f5f5">
+    <name>УдобствоРаботыСОбращениями</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удобство работы с обращениями</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3af6486a-cc61-435a-ab26-7b71896d3cd0">
+    <name>ОценкаСотрудника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка сотрудника</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="944292e5-c707-48bf-9499-4b5c507aa3c4">
+    <name>ПожеланияИПредложения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пожелания и предложения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="80db28e1-36f2-4465-b011-4bd01386d518">
+    <name>Респондент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Респондент</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

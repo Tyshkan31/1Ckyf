@@ -1341,6 +1341,7 @@
   <enums>Enum.РежимыВыполненияОбработчиков</enums>
   <enums>Enum.РежимыВыполненияОтложенныхОбработчиков</enums>
   <enums>Enum.РежимыОчисткиФайлов</enums>
+  <enums>Enum.РешеноЛиОбращение</enums>
   <enums>Enum.СостоянияБизнесПроцессов</enums>
   <enums>Enum.СостоянияДокументаСообщениеSMS</enums>
   <enums>Enum.СостоянияПользователей</enums>
@@ -1410,6 +1411,7 @@
   <dataProcessors>DataProcessor.ГрупповоеИзменениеРеквизитов</dataProcessors>
   <dataProcessors>DataProcessor.ДоступныеАнкеты</dataProcessors>
   <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузитьДанныеПоОценкеКачества</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеГрафиковРаботы</dataProcessors>
   <dataProcessors>DataProcessor.ЗаполнениеКалендарныхГрафиков</dataProcessors>
   <dataProcessors>DataProcessor.ИнтеграцияТГ</dataProcessors>
@@ -1491,6 +1493,7 @@
   <informationRegisters>InformationRegister.ОсновныеПечатныеФормыОбъектов</informationRegisters>
   <informationRegisters>InformationRegister.ОтветыНаВопросыАнкет</informationRegisters>
   <informationRegisters>InformationRegister.ОтправленныеСерверныеОповещения</informationRegisters>
+  <informationRegisters>InformationRegister.ОценкаКачестваОбслуживания</informationRegisters>
   <informationRegisters>InformationRegister.ПараметрыОграниченияДоступа</informationRegisters>
   <informationRegisters>InformationRegister.ПараметрыРаботыВерсийРасширений</informationRegisters>
   <informationRegisters>InformationRegister.ПараметрыРаботыПрограммы</informationRegisters>

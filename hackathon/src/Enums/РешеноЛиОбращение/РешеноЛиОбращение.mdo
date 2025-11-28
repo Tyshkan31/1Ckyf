@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce6f011f-a10b-42e2-92e0-1509cfd6c846">
+  <producedTypes>
+    <refType typeId="6c51168c-65f5-4d0b-9b9b-08442a441e02" valueTypeId="572e881a-318f-4c33-83c5-a941fad3e787"/>
+    <listType typeId="57af30d2-4321-4d0b-b9b2-937cbce81b22" valueTypeId="d23a2535-4e88-4383-aed9-7590a9d94e06"/>
+    <managerType typeId="cf6033fd-b447-4f02-92d4-6afb69b2cb8b" valueTypeId="42861620-492d-4376-8375-2274a976f997"/>
+  </producedTypes>
+  <name>РешеноЛиОбращение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Решено ли обращение</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="aea45ece-964b-4b13-9179-68c32766ece4">
+    <name>Да</name>
+    <synonym>
+      <key>ru</key>
+      <value>Да</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4f5c59c5-0790-4b09-8020-8293bf654db9">
+    <name>Нет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нет</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cd98116f-de82-4553-ae05-9fad2eff5102">
+    <name>Частично</name>
+    <synonym>
+      <key>ru</key>
+      <value>Частично</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0c7e67fe-be1d-4c28-b25f-2d97dd2f0f56">
+    <name>Другое</name>
+    <synonym>
+      <key>ru</key>
+      <value>Другое</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

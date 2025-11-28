@@ -18,5 +18,7 @@
   <content>Catalog.Сотрудники</content>
   <content>Catalog.ШаблоныСообщений</content>
   <content>InformationRegister.СтатусыHTTPЗапросов</content>
+  <content>DataProcessor.ЗагрузитьДанныеПоОценкеКачества</content>
+  <content>InformationRegister.ОценкаКачестваОбслуживания</content>
   <subsystems>Сервис</subsystems>
 </mdclass:Subsystem>

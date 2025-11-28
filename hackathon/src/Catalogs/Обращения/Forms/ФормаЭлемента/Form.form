@@ -1656,6 +1656,7 @@
         <appearanceMode>CommandBar</appearanceMode>
       </selectedItemsActionsPanel>
       <type>LabelField</type>
+      <readOnly>true</readOnly>
       <editMode>EnterOnInput</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -1699,6 +1700,7 @@
         <appearanceMode>CommandBar</appearanceMode>
       </selectedItemsActionsPanel>
       <type>InputField</type>
+      <readOnly>true</readOnly>
       <editMode>EnterOnInput</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -1797,6 +1799,7 @@
         <appearanceMode>CommandBar</appearanceMode>
       </selectedItemsActionsPanel>
       <type>InputField</type>
+      <readOnly>true</readOnly>
       <editMode>EnterOnInput</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -1846,6 +1849,7 @@
         <appearanceMode>CommandBar</appearanceMode>
       </selectedItemsActionsPanel>
       <type>CheckBoxField</type>
+      <readOnly>true</readOnly>
       <editMode>EnterOnInput</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -1855,6 +1859,39 @@
     <autoCommandBar>
       <name>КомментарииКоманднаяПанель</name>
       <id>41</id>
+      <items xsi:type="form:Button">
+        <name>ОтправитьСообщениеПользователю</name>
+        <id>247</id>
+        <title>
+          <key>ru</key>
+          <value>Написать клиенту</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ОтправитьСообщениеПользователюРасширеннаяПодсказка</name>
+          <id>248</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ОтправитьСообщениеПользователю</commandName>
+        <buttonImportance>Normal</buttonImportance>
+        <representation>PictureAndText</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.SendMessage</picture>
+        </picture>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
       <horizontalAlign>Left</horizontalAlign>
       <autoFill>true</autoFill>
     </autoCommandBar>
@@ -2171,6 +2208,23 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ФормаМодифицировалась</name>
+    <title>
+      <key>ru</key>
+      <value>Форма модифицировалась</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ОтразитьЧасы</name>
     <title>
@@ -2214,11 +2268,37 @@
     <currentRowUse>Auto</currentRowUse>
     <selectedRowsUse>Auto</selectedRowsUse>
   </formCommands>
+  <formCommands>
+    <name>ОтправитьСообщениеПользователю</name>
+    <title>
+      <key>ru</key>
+      <value>Отправить сообщение пользователю</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Отправить сообщение пользователю</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОтправитьСообщениеПользователю</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+    <selectedRowsUse>Auto</selectedRowsUse>
+  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>
   </commandInterface>
   <extInfo xsi:type="form:CatalogFormExtInfo">
+    <handlers>
+      <event>AfterWrite</event>
+      <name>ПослеЗаписи</name>
+    </handlers>
     <handlers>
       <event>BeforeWrite</event>
       <name>ПередЗаписью</name>

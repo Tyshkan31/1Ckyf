@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="964eb646-4874-4d63-8179-abf70c3ec64b">
+  <producedTypes>
+    <objectType typeId="e577d549-4e29-41e3-a2f9-e25c9e40f5a2" valueTypeId="679eff03-2adf-4fef-b263-7c7bf951d7cc"/>
+    <managerType typeId="d97f4809-76ad-4d17-8242-f0b024a51f76" valueTypeId="1af003e6-2aeb-40ea-8f7b-ceb411a0521d"/>
+  </producedTypes>
+  <name>ЗагрузитьДанныеПоОценкеКачества</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузить данные по оценке качества</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗагрузитьДанныеПоОценкеКачества.Form.Форма</defaultForm>
+  <forms uuid="90646da6-9a4d-4a09-8fec-c83a4f517083">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
