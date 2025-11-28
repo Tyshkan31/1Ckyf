@@ -105,6 +105,13 @@
   <autonumbering>true</autonumbering>
   <defaultPresentation>AsDescription</defaultPresentation>
   <predefined>
+    <items id="824ccebf-af3d-4427-ae58-9844a7612be6">
+      <name>СервисДескЭлемент</name>
+      <description>1С-Элемент</description>
+      <code xsi:type="core:StringValue">
+        <value>000000005</value>
+      </code>
+    </items>
     <items id="bc62a136-6fce-48d1-8f10-15b750489387">
       <name>AmoCRM</name>
       <description>Amo CRM</description>
@@ -117,6 +124,13 @@
       <description>Telegram</description>
       <code xsi:type="core:StringValue">
         <value>000000004</value>
+      </code>
+    </items>
+    <items id="2629d611-ac31-4b57-8be7-be98acc5268d">
+      <name>ОпубликованныйСервер</name>
+      <description>Опубликованный сервер</description>
+      <code xsi:type="core:StringValue">
+        <value>000000006</value>
       </code>
     </items>
     <items id="7147077d-9c38-4b5f-a9e2-b766c01277b1">
