@@ -610,6 +610,7 @@
   <roles>Role.ЧтениеДополнительныхСведений</roles>
   <roles>Role.ЧтениеЗаданий</roles>
   <roles>Role.ЧтениеЗадач</roles>
+  <roles>Role.ЧтениеИзменениеИспользованиеЛинийПоддержки</roles>
   <roles>Role.ЧтениеИнформацииОВерсияхОбъектов</roles>
   <roles>Role.ЧтениеМетрикSLA</roles>
   <roles>Role.ЧтениеНавыковСотрудников</roles>

@@ -12,5 +12,6 @@
   <content>Catalog.ПочтовыеСообщения</content>
   <content>DataProcessor.ОбработкаЗапроса</content>
   <content>InformationRegister.СтатусыHTTPЗапросов</content>
+  <content>Constant.ИспользованиеЛинийПоддержки</content>
   <parentSubsystem>Subsystem.РегистрацияИОбработкаОбращений</parentSubsystem>
 </mdclass:Subsystem>
