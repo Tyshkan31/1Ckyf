@@ -615,6 +615,7 @@
   <roles>Role.ЧтениеМетрикSLA</roles>
   <roles>Role.ЧтениеНавыковСотрудников</roles>
   <roles>Role.ЧтениеОбращенийСправочник</roles>
+  <roles>Role.ЧтениеОповещенийПользователей</roles>
   <roles>Role.ЧтениеОповещенияПользователей</roles>
   <roles>Role.ЧтениеОтветовНаВопросыАнкет</roles>
   <roles>Role.ЧтениеПодсистем</roles>
