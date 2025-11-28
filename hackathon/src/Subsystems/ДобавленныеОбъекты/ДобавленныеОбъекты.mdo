@@ -28,4 +28,5 @@
   <content>DataProcessor.ИнтеграцияТГ</content>
   <content>DataProcessor.Тест</content>
   <content>InformationRegister.СтатусыHTTPЗапросов</content>
+  <content>Report.МониторингSLA</content>
 </mdclass:Subsystem>
