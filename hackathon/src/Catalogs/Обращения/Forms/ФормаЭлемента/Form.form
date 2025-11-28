@@ -1068,6 +1068,10 @@
               <event>DocumentComplete</event>
               <name>ПолеHTMLДокументСформирован</name>
             </handlers>
+            <handlers>
+              <event>OnClick</event>
+              <name>ПолеHTMLПриНажатии</name>
+            </handlers>
             <width>50</width>
             <autoMaxWidth>true</autoMaxWidth>
             <height>4</height>
@@ -1262,7 +1266,6 @@
   <items xsi:type="form:FormField">
     <name>ОценкаТрудозатратПоЗадаче</name>
     <id>213</id>
-    <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
       <common>true</common>
@@ -1750,6 +1753,7 @@
         <appearanceMode>CommandBar</appearanceMode>
       </selectedItemsActionsPanel>
       <type>InputField</type>
+      <readOnly>true</readOnly>
       <editMode>EnterOnInput</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
