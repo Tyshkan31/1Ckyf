@@ -7,7 +7,7 @@
   <name>КанбанДоска</name>
   <synonym>
     <key>ru</key>
-    <value>Канбан доска</value>
+    <value>Начальная страница</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КанбанДоска.Form.Форма</defaultForm>

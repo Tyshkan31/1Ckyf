@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="abfb568d-38b6-4622-9a5e-0c810b6da24e">
+  <name>ЗеленыйСмайлик</name>
+  <synonym>
+    <key>ru</key>
+    <value>Зеленый смайлик</value>
+  </synonym>
+</mdclass:CommonPicture>

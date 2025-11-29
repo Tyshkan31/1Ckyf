@@ -168,6 +168,7 @@
   <commonPictures>CommonPicture.ДополнительныеРеквизитыСведения</commonPictures>
   <commonPictures>CommonPicture.ДополнительныеСведения</commonPictures>
   <commonPictures>CommonPicture.Другое</commonPictures>
+  <commonPictures>CommonPicture.ЖелтыйСмайлик</commonPictures>
   <commonPictures>CommonPicture.ЗавершитьРаботу</commonPictures>
   <commonPictures>CommonPicture.ЗавершитьРедактированиеМакета</commonPictures>
   <commonPictures>CommonPicture.ЗакончитьРедактированиеФайла</commonPictures>
@@ -177,6 +178,7 @@
   <commonPictures>CommonPicture.ЗаполнитьФорму</commonPictures>
   <commonPictures>CommonPicture.ЗаставкаВнешнейОперации</commonPictures>
   <commonPictures>CommonPicture.Зашифрован</commonPictures>
+  <commonPictures>CommonPicture.ЗеленыйСмайлик</commonPictures>
   <commonPictures>CommonPicture.ЗнакСтоп</commonPictures>
   <commonPictures>CommonPicture.ЗнакСтопЧБ</commonPictures>
   <commonPictures>CommonPicture.ЗначокЗаставкиВнешнейОперации</commonPictures>
